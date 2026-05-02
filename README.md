@@ -1,5 +1,5 @@
 
-# Adilson AzyKey — Inteligência Artificial Completa
+# Adilson AzyKey  Inteligência Artificial Completa
 
 ## Decisão editorial profissional
 
