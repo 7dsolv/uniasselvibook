@@ -167,7 +167,7 @@ Colapsos pra |0000⟩: 512 de 1024 (50.0%)
 
 #### **Seção 1.1: O Que é um Vetor?**  
 - **Definição**:  
-  Um vetor $\mathbf{v} \in \mathbb{R}^n$ é uma lista ordenada de números:  
+  Um vetor $\mathbf{v} \in \mathbb{R}^n$ é uma lista ordenada de números:
   
 $$
 \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
@@ -214,7 +214,7 @@ Nota: Cada página será tão detalhada quanto esta! 📘
 
 ### **Seção 1.3: O Que é uma Matriz?**  
 - **Definição**:  
-  Uma matriz $\mathbf{A} \in \mathbb{R}^{m \times n}$ é uma grade bidimensional de números:  
+  Uma matriz $\mathbf{A} \in \mathbb{R}^{m \times n}$ é uma grade bidimensional de números:
   
 $$
 \mathbf{A} = \begin{bmatrix} 
@@ -257,14 +257,14 @@ $$
 
 ### **Seção 1.4: Multiplicação de Matrizes Passo a Passo**  
 1. **Regra Geral**:  
-   Para $\mathbf{A} \in \mathbb{R}^{m \times n}$ e $\mathbf{B} \in \mathbb{R}^{n \times p}$:  
+   Para $\mathbf{A} \in \mathbb{R}^{m \times n}$ e $\mathbf{B} \in \mathbb{R}^{n \times p}$:
    
 $$
 (\mathbf{A} \cdot \mathbf{B})_{ij} = \sum_{k=1}^n a_{ik} b_{kj}
 $$
   
 2. **Exemplo Numérico**:  
-   Se $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ e $\mathbf{B} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$:  
+   Se $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ e $\mathbf{B} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$:
    
 $$
 \mathbf{A} \cdot \mathbf{B} = \begin{bmatrix} (1 \cdot 5 + 2 \cdot 7) & (1 \cdot 6 + 2 \cdot 8) \\ (3 \cdot 5 + 4 \cdot 7) & (3 \cdot 6 + 4 \cdot 8) \end{bmatrix} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
@@ -274,7 +274,7 @@ $$
 ---
 
 ### **Seção 1.5: Importância em IA**  
-- **Neural Networks**: Camadas são multiplicações de matrizes (pesos $\cdot$ inputs + bias).  
+- **Neural Networks**: Camadas são multiplicações de matrizes (pesos $\cdot$ inputs + bias).
 - **Exemplo Visual**:  
   ```
   [Input] ---> [Matriz de Pesos] ---> [Output]  
@@ -286,7 +286,7 @@ $$
 
 ### **Exercício Página 2**:  
 3. Implemente a multiplicação de matrizes usando a classe acima.  
-4. Calcule manualmente $\begin{bmatrix} 2 & -1 \\ 0 & 3 \end{bmatrix} \cdot \begin{bmatrix} 4 & 5 \\ 1 & 2 \end{bmatrix}$.  
+4. Calcule manualmente $\begin{bmatrix} 2 & -1 \\ 0 & 3 \end{bmatrix} \cdot \begin{bmatrix} 4 & 5 \\ 1 & 2 \end{bmatrix}$.
 
 ---
 
@@ -307,7 +307,7 @@ $$
 **(Conteúdo 100% preenchido, sem espaços não utilizados)**  
 
 **1. Vetores e Espaços Euclidianos**  
-Um vetor em $\mathbb{R}^n$ é uma entidade com magnitude e direção. Formalmente:  
+Um vetor em $\mathbb{R}^n$ é uma entidade com magnitude e direção. Formalmente:
 
 $$
 \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}, \quad \text{onde } v_i \in \mathbb{R}
@@ -324,7 +324,7 @@ class Vetor:
         return Vetor([a + b for a, b in zip(self.elementos, outro.elementos)])  
 ```  
 **Exemplo numérico:**  
-Se $\mathbf{v} = [2, -3]$ e $\mathbf{w} = [1, 4]$, então:  
+Se $\mathbf{v} = [2, -3]$ e $\mathbf{w} = [1, 4]$, então:
 
 $$
 \mathbf{v} + \mathbf{w} = [3, 1], \quad ||\mathbf{v}|| = \sqrt{13}
@@ -346,7 +346,7 @@ def produto_escalar(v, w):
 **Aplicação em IA:** Similaridade de cossenos (usada em NLP e sistemas de recomendação).  
 
 **3. Multiplicação Matriz-Vetor**  
-Uma matriz $\mathbf{A} \in \mathbb{R}^{m \times n}$ transforma um vetor $\mathbf{v} \in \mathbb{R}^n$ em $\mathbb{R}^m$:  
+Uma matriz $\mathbf{A} \in \mathbb{R}^{m \times n}$ transforma um vetor $\mathbf{v} \in \mathbb{R}^n$ em $\mathbb{R}^m$:
 
 $$
 (\mathbf{A} \cdot \mathbf{v})_i = \sum_{j=1}^n A_{ij} v_j
@@ -361,7 +361,7 @@ class Matriz:
         return Vetor([sum(a * b for a, b in zip(linha, v.elementos)) for linha in self.linhas])  
 ```  
 **Exemplo:**  
-Se $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ e $\mathbf{v} = [5, 6]$, então:  
+Se $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ e $\mathbf{v} = [5, 6]$, então:
 
 $$
 \mathbf{A} \cdot \mathbf{v} = [17, 39]
@@ -370,7 +370,7 @@ $$
 
 **Exercício obrigatório (Página 1):**  
 5. Implemente a classe `Matriz` com multiplicação por outro vetor.  
-6. Calcule $\mathbf{A} \cdot \mathbf{v}$ para $\mathbf{A} = \begin{bmatrix} -1 & 0 \\ 2 & 3 \end{bmatrix}$ e $\mathbf{v} = [4, -2]$.  
+6. Calcule $\mathbf{A} \cdot \mathbf{v}$ para $\mathbf{A} = \begin{bmatrix} -1 & 0 \\ 2 & 3 \end{bmatrix}$ e $\mathbf{v} = [4, -2]$.
 
 **Próxima página (2/1000):** Multiplicação de Matrizes, Inversas, e Decomposição LU *from scratch*.  
 
@@ -392,7 +392,7 @@ Se preferir um estilo ainda mais compacto (ex: fórmulas e código lado a lado),
 ---
 
 ### **1. Multiplicação de Matrizes**  
-Dadas duas matrizes $\mathbf{A} \in \mathbb{R}^{m \times n}$ e $\mathbf{B} \in \mathbb{R}^{n \times p}$, o produto $\mathbf{C} = \mathbf{A} \cdot \mathbf{B}$ é definido por:  
+Dadas duas matrizes $\mathbf{A} \in \mathbb{R}^{m \times n}$ e $\mathbf{B} \in \mathbb{R}^{n \times p}$, o produto $\mathbf{C} = \mathbf{A} \cdot \mathbf{B}$ é definido por:
 
 $$
 C_{ij} = \sum_{k=1}^n A_{ik} B_{kj} \quad \text{para } 1 \leq i \leq m, \, 1 \leq j \leq p
@@ -415,7 +415,7 @@ def multiplicar_matrizes(A, B):
     return Matriz(resultado)  
 ```  
 **Exemplo Numérico:**  
-Se $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ e $\mathbf{B} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$:  
+Se $\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ e $\mathbf{B} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$:
 
 $$
 \mathbf{A} \cdot \mathbf{B} = \begin{bmatrix} 19 & 22 \\ 43 & 50 \end{bmatrix}
@@ -425,14 +425,14 @@ $$
 ---
 
 ### **2. Matriz Identidade e Inversa**  
-- **Matriz Identidade $\mathbf{I}_n$:**  
+- **Matriz Identidade $\mathbf{I}_n$:**
   
 $$
 I_{ij} = \begin{cases} 1 & \text{se } i = j \\ 0 & \text{caso contrário} \end{cases}
 $$
   
-- **Matriz Inversa $\mathbf{A}^{-1}$:**  
-  Uma matriz $\mathbf{A}^{-1}$ é inversa de $\mathbf{A}$ se:  
+- **Matriz Inversa $\mathbf{A}^{-1}$:**
+  Uma matriz $\mathbf{A}^{-1}$ é inversa de $\mathbf{A}$ se:
   
 $$
 \mathbf{A} \cdot \mathbf{A}^{-1} = \mathbf{I}_n
@@ -458,17 +458,17 @@ $$
 ---
 
 ### **3. Decomposição LU**  
-A decomposição LU fatora uma matriz $\mathbf{A}$ em:  
+A decomposição LU fatora uma matriz $\mathbf{A}$ em:
 
 $$
 \mathbf{A} = \mathbf{L} \cdot \mathbf{U}
 $$
   
-onde $\mathbf{L}$ é triangular inferior e $\mathbf{U}$ triangular superior.  
+onde $\mathbf{L}$ é triangular inferior e $\mathbf{U}$ triangular superior.
 **Algoritmo (Crout):**  
-7. Para cada linha $i$:  
-   - $U_{ij} = A_{ij} - \sum_{k=1}^{i-1} L_{ik} U_{kj}$ para $j \geq i$.  
-   - $L_{ji} = \frac{A_{ji} - \sum_{k=1}^{i-1} L_{jk} U_{ki}}{U_{ii}}$ para $j > i$.  
+7. Para cada linha $i$:
+   - $U_{ij} = A_{ij} - \sum_{k=1}^{i-1} L_{ik} U_{kj}$ para $j \geq i$.
+   - $L_{ji} = \frac{A_{ji} - \sum_{k=1}^{i-1} L_{jk} U_{ki}}{U_{ii}}$ para $j > i$.
 **Implementação (Python puro):**  
 ```python  
 def decomposicao_LU(A):  
@@ -488,8 +488,8 @@ def decomposicao_LU(A):
 
 ### **Exercício Obrigatório (Página 2):**  
 8. Implemente a multiplicação de matrizes para dimensões 3x3.  
-9. Calcule a inversa de $\mathbf{A} = \begin{bmatrix} 2 & -1 \\ 0 & 3 \end{bmatrix}$ manualmente e usando o código.  
-10. Aplique a decomposição LU em $\mathbf{A} = \begin{bmatrix} 4 & 3 \\ 6 & 3 \end{bmatrix}$.  
+9. Calcule a inversa de $\mathbf{A} = \begin{bmatrix} 2 & -1 \\ 0 & 3 \end{bmatrix}$ manualmente e usando o código.
+10. Aplique a decomposição LU em $\mathbf{A} = \begin{bmatrix} 4 & 3 \\ 6 & 3 \end{bmatrix}$.
 
 ---
 
@@ -511,7 +511,7 @@ def decomposicao_LU(A):
 ---
 
 ### **1. Tensores: Generalização de Matrizes**  
-Um tensor de ordem $k$ é uma estrutura $n_1 \times n_2 \times \cdots \times n_k$. Exemplo para ordem 3:  
+Um tensor de ordem $k$ é uma estrutura $n_1 \times n_2 \times \cdots \times n_k$. Exemplo para ordem 3:
 
 $$
 \mathcal{T} \in \mathbb{R}^{2 \times 3 \times 4} \Rightarrow \mathcal{T} = \begin{bmatrix} 
@@ -536,7 +536,7 @@ tensor = Tensor3D([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 ---
 
 ### **2. Convolução de Tensores (Operação Fundamental em CNNs)**  
-Uma convolução aplica um *kernel* $\mathcal{K}$ sobre um tensor $\mathcal{X}$:  
+Uma convolução aplica um *kernel* $\mathcal{K}$ sobre um tensor $\mathcal{X}$:
 
 $$
 (\mathcal{X} \ast \mathcal{K})_{i,j,k} = \sum_{a=0}^{h-1} \sum_{b=0}^{w-1} \sum_{c=0}^{d-1} \mathcal{X}_{i+a,j+b,k+c} \cdot \mathcal{K}_{a,b,c}
@@ -604,8 +604,8 @@ Saída (1x2x2): `[[[3.0, 4.5], [6.0, 7.5]]]`
 
 ### **1. O Que é Autodiferenciação?**  
 Autodiferenciação é a técnica que calcula gradientes automaticamente usando o *chain rule* (regra da cadeia). Todo tensor ou valor numérico rastreia:  
-- **Valor**: $\text{data} \in \mathbb{R}$.  
-- **Gradiente**: $\frac{\partial L}{\partial \text{data}}$, onde $L$ é a perda.  
+- **Valor**: $\text{data} \in \mathbb{R}$.
+- **Gradiente**: $\frac{\partial L}{\partial \text{data}}$, onde $L$ é a perda.
 - **Operação**: Função que o gerou (ex: `+`, `*`).  
 
 **Implementação da Classe `Value` (Base do Autograd):**  
@@ -671,7 +671,7 @@ print(b.grad)  # 2.0 (derivada de c em relação a b: dc/db = a)
 ---
 
 ### **3. Grafos Computacionais**  
-O cálculo $c = a \cdot b + 4$ gera o grafo:  
+O cálculo $c = a \cdot b + 4$ gera o grafo:
 ```  
     (+)  
    /   \  
@@ -679,13 +679,13 @@ O cálculo $c = a \cdot b + 4$ gera o grafo:
 /  \  
 a   b  
 ```  
-- **Backward**: Propaga gradientes de $c$ (topo) para $a$ e $b$ (folhas).  
+- **Backward**: Propaga gradientes de $c$ (topo) para $a$ e $b$ (folhas).
 
 ---
 
 ### **4. Exercício Obrigatório (Página 4):**  
 14. Implemente a subtração (`__sub__`) e divisão (`__truediv__`) na classe `Value`.  
-15. Calcule $\frac{\partial L}{\partial x}$ para $L = (x / y) - z$, onde $x=5$, $y=2$, $z=1$.  
+15. Calcule $\frac{\partial L}{\partial x}$ para $L = (x / y) - z$, onde $x=5$, $y=2$, $z=1$.
 16. Modifique `backward` para suportar funções não lineares (ex: `ReLU`).  
 
 ---
@@ -765,7 +765,7 @@ $$
 ---
 
 ### **3. Função de Perda (MSE)**  
-\[
+$$
 L = \frac{1}{n} \sum_{i=1}^n (y_{\text{pred}}^{(i)} - y_{\text{true}}^{(i)})^2
 $$
   
@@ -1106,14 +1106,14 @@ $$
 $$
   
 **Causas**:  
-- Funções de ativação saturadas (ex: sigmoid $\sigma'(x) \leq 0.25$).  
+- Funções de ativação saturadas (ex: sigmoid $\sigma'(x) \leq 0.25$).
 - Inicialização inadequada de pesos (ex: variância alta/baixa).  
 
 ---
 
 ### **2. Soluções Práticas**  
 #### **2.1 Inicialização de He/Kaiming**  
-Para ReLU, inicialize pesos $\mathbf{W} \sim \mathcal{N}(0, \sqrt{2/n_{\text{input}}})$:  
+Para ReLU, inicialize pesos $\mathbf{W} \sim \mathcal{N}(0, \sqrt{2/n_{\text{input}}})$:
 ```python  
 def inicializacao_he(input_dim):  
     std = (2.0 / input_dim) ** 0.5  
@@ -1288,7 +1288,7 @@ class CamadaDensaComRegularizacao:
 ---
 
 ### **Exercício Obrigatório (Página 7):**  
-30. Implemente o backward pass para `BatchNorm` (dica: use a regra da cadeia em $\gamma$ e $\beta$).  
+30. Implemente o backward pass para `BatchNorm` (dica: use a regra da cadeia em $\gamma$ e $\beta$).
 31. Adicione Dropout à rede do XOR (Página 5) e observe o impacto na generalização.  
 32. Teste diferentes taxas de dropout (0.2, 0.5) em um modelo profundo.  
 
@@ -1352,7 +1352,7 @@ class Adam:
 ### **2. O Oliveira-Optimizer (Proposta Experimental Autoral)**  
 **Diferenciais Originais:**  
 33. **Adaptação Hierárquica:** Ajusta a taxa de aprendizado por camada, usando a profundidade da rede.  
-34. **Momentum Dinâmico:** $\beta_1$ varia conforme a estabilidade dos gradientes.  
+34. **Momentum Dinâmico:** $\beta_1$ varia conforme a estabilidade dos gradientes.
 35. **Penalidade de Coerência:** Reduz updates oscilatórios com um termo de suavização.  
 
 **Equações do Oliveira-Optimizer:**  
@@ -1402,7 +1402,7 @@ Os valores abaixo são placeholders didáticos para mostrar como uma tabela de c
 
 ### **Exercício Obrigatório (Página 8):**  
 36. Implemente o Oliveira-Optimizer para treinar uma CNN simples (use o código da Página 3).  
-37. Modifique o fator de camada para usar logaritmo: $\frac{1}{\ln(\text{camada} + 2)}$.  
+37. Modifique o fator de camada para usar logaritmo: $\frac{1}{\ln(\text{camada} + 2)}$.
 38. Compare Adam vs. Oliveira em um problema de regressão linear (dados sintéticos).  
 
 ---
@@ -1426,7 +1426,7 @@ Os valores abaixo são placeholders didáticos para mostrar como uma tabela de c
 ---
 
 ### **1. RNNs Clássicas: Modelagem de Sequências**  
-Uma RNN processa sequências mantendo um *estado oculto* $\mathbf{h}_t$:  
+Uma RNN processa sequências mantendo um *estado oculto* $\mathbf{h}_t$:
 
 $$
 \begin{align*} 
@@ -1461,7 +1461,7 @@ class RNN:
 ---
 
 ### **2. LSTMs: Resolvendo o Problema do Vanishing Gradient**  
-As LSTMs introduzem células de memória ($\mathbf{C}_t$) e *gates* para controlar o fluxo de informação:  
+As LSTMs introduzem células de memória ($\mathbf{C}_t$) e *gates* para controlar o fluxo de informação:
 
 $$
 \begin{align*} 
@@ -1761,7 +1761,7 @@ Após processamento por camadas do transformer, embeddings estáticos tornam-se 
 ---
 
 ### **Exercício Obrigatório (Página 11):**  
-47. Implemente a codificação sinusoidal para $d_{\text{model}} = 128$ e plote (via ASCII art) as frequências.  
+47. Implemente a codificação sinusoidal para $d_{\text{model}} = 128$ e plote (via ASCII art) as frequências.
 48. Modifique `Embeddings` para usar codificação aprendida e treine em uma frase curta.  
 49. Compare o desempenho de ambas as codificações em uma tarefa de previsão de próxima palavra.  
 
@@ -1891,10 +1891,10 @@ for epoch in range(100):
 ---
 
 ### **1. Beam Search: Busca em Feixe para Sequências Ótimas**  
-**Objetivo**: Encontrar a sequência mais provável mantendo múltiplas hipóteses (feixe de tamanho $B$):  
-56. **Inicialização**: Gere as primeiras $B$ palavras.  
-57. **Expansão**: Para cada hipótese no feixe, calcule as $k$ próximas palavras mais prováveis.  
-58. **Seleção**: Mantenha as $B$ sequências com maior probabilidade acumulada.  
+**Objetivo**: Encontrar a sequência mais provável mantendo múltiplas hipóteses (feixe de tamanho $B$):
+56. **Inicialização**: Gere as primeiras $B$ palavras.
+57. **Expansão**: Para cada hipótese no feixe, calcule as $k$ próximas palavras mais prováveis.
+58. **Seleção**: Mantenha as $B$ sequências com maior probabilidade acumulada.
 
 **Implementação em Python Puro**:  
 ```python  
@@ -1921,16 +1921,16 @@ def beam_search(modelo, inicio_ids, beam_width=3, max_len=20):
 ---
 
 ### **2. Amostragem Criativa: Temperatura e Top-k**  
-- **Temperatura ($\tau$)** : Controla a aleatoriedade das previsões:  
+- **Temperatura ($\tau$)** : Controla a aleatoriedade das previsões:
   
 $$
 P(w_i) = \frac{\exp(z_i / \tau)}{\sum_j \exp(z_j / \tau)}
 $$
   
-  - $\tau \to 0$: Greedy determinístico.  
-  - $\tau \to \infty$: Uniforme aleatório.  
+  - $\tau \to 0$: Greedy determinístico.
+  - $\tau \to \infty$: Uniforme aleatório.
 
-- **Top-k Sampling**: Amostra apenas dos $k$ tokens mais prováveis.  
+- **Top-k Sampling**: Amostra apenas dos $k$ tokens mais prováveis.
 
 **Implementação**:  
 ```python  
@@ -1965,7 +1965,7 @@ texto_gerado = [modelo_poesia.id_para_token[id] for id in melhor_seq]
 
 ### **Exercício Obrigatório (Página 13):**  
 59. Modifique `beam_search` para incluir penalização de repetição (evitar palavras repetidas).  
-60. Implemente **nucleus sampling (top-p)**, que amostra do menor conjunto de tokens cuja probabilidade acumulada ≥ $p$.  
+60. Implemente **nucleus sampling (top-p)**, que amostra do menor conjunto de tokens cuja probabilidade acumulada ≥ $p$.
 61. Gere um haiku (poema japonês 5-7-5) usando temperatura 0.7 e beam width 3.  
 
 ---
@@ -2398,7 +2398,7 @@ while True:
 ---
 
 ### **2. Média Federada (FedAvg)**  
-Dados $N$ clientes, cada um com gradientes $\nabla \theta_k$:  
+Dados $N$ clientes, cada um com gradientes $\nabla \theta_k$:
 
 $$
 \theta_{\text{global}}^{t+1} = \theta_{\text{global}}^t - \eta \cdot \frac{1}{N} \sum_{k=1}^N \nabla \theta_k
@@ -2510,7 +2510,7 @@ $$
 Q_i(s, a_i) \leftarrow Q_i(s, a_i) + \alpha \left[ r_i + \gamma \max_{a_i'} Q_i(s', a_i') - Q_i(s, a_i) \right]
 $$
   
-  *(Cada agente $i$ atualiza sua própria Q-table baseado nas ações dos outros.)*  
+  *(Cada agente $i$ atualiza sua própria Q-table baseado nas ações dos outros.)*
 
 ---
 
@@ -2556,7 +2556,7 @@ class AgenteMercado:
         self.lucro = 0.0  
 
     def discretizar_estado(self, preco, rsi):  
-        preco_bin = int(preco // 10)  # Bin de R$10  
+        preco_bin = int(preco // 10)  # Bin de R$10
         rsi_bin = int(rsi // 20)      # Bin de 20 unidades  
         return (preco_bin, rsi_bin)  
 
@@ -2788,9 +2788,9 @@ $$
 
 ### **2. Oliveira-Optimizer Quântico (QOO)**  
 **Híbrido Quântico-Clássico**:  
-93. **Circuito Quântico Variacional**: Prepara o estado $|\psi(\theta)\rangle$.  
-94. **Medição**: Calcula o valor esperado $\langle \psi(\theta) | H | \psi(\theta) \rangle$.  
-95. **Atualização Clássica**: Usa Oliveira-Optimizer para ajustar $\theta$ e minimizar a energia.  
+93. **Circuito Quântico Variacional**: Prepara o estado $|\psi(\theta)\rangle$.
+94. **Medição**: Calcula o valor esperado $\langle \psi(\theta) | H | \psi(\theta) \rangle$.
+95. **Atualização Clássica**: Usa Oliveira-Optimizer para ajustar $\theta$ e minimizar a energia.
 
 **Equação de Atualização Quântica**:  
 
@@ -2841,7 +2841,7 @@ class CircuitoQOO:
 ---
 
 ### **4. Exemplo: Minimizando a Energia de um Hamiltoniano**  
-**Problema**: Encontrar o estado fundamental de $H = Z \otimes Z$ (Hamiltoniano de interação quântica).  
+**Problema**: Encontrar o estado fundamental de $H = Z \otimes Z$ (Hamiltoniano de interação quântica).
 ```python  
 # Inicialização  
 circuito = CircuitoQOO(num_qubits=2)  
@@ -2870,7 +2870,7 @@ for epoch in range(100):
 
 ### **Exercício Obrigatório (Página 20)**:  
 96. Implemente a **porta CNOT** no simulador quântico.  
-97. Modifique o exemplo para usar 3 qubits e um Hamiltoniano $H = X \otimes X \otimes X$.  
+97. Modifique o exemplo para usar 3 qubits e um Hamiltoniano $H = X \otimes X \otimes X$.
 98. Adicione **entropia de von Neumann** à função de custo para maximizar emaranhamento.  
 
 ---
@@ -3036,7 +3036,7 @@ $$
 \frac{dx}{dt} = \mu_v \frac{R_{ON}}{D} i(t) \cdot w(x), \quad x \in [0, 1]
 $$
   
-Onde $x$ é a fronteira entre regiões dopadas/não-dopadas, $\mu_v$ mobilidade iônica, $D$ espessura total.  
+Onde $x$ é a fronteira entre regiões dopadas/não-dopadas, $\mu_v$ mobilidade iônica, $D$ espessura total.
 
 **Implementação**:  
 ```python  
@@ -3296,8 +3296,8 @@ class DeepQNN:
 ### **3. Aplicação: Reconhecimento de Estados Entrelaçados**  
 **Problema**: Classificar entre estados |Φ+⟩ (Bell) e |GHZ⟩ (Greenberger–Horne–Zeilinger).  
 **Dataset**:  
-- **|Φ+⟩**: $(|00...0⟩ + |11...1⟩)/√2$  
-- **|GHZ⟩**: $(|00...0⟩ + |11...1⟩)/√2$ (mas com medidas intermediárias diferentes).  
+- **|Φ+⟩**: $(|00...0⟩ + |11...1⟩)/√2$
+- **|GHZ⟩**: $(|00...0⟩ + |11...1⟩)/√2$ (mas com medidas intermediárias diferentes).
 
 **Treino**:  
 ```python  
@@ -3338,7 +3338,7 @@ for epoch in range(100):
 ### **Exercício Obrigatório (Página 24)**:  
 108. Implemente uma **camada de pooling quântico** que agrupa 2 qubits em 1 (dica: medir e pós-selecionar).  
 109. Adicione **camadas residuais** (ex: saltos quânticos entre camadas distantes).  
-110. Teste a QNN em estados $|W⟩ (ex: |W⟩ = (|100...0⟩ + |010...0⟩ + ... + |000...1⟩)/√10)$.  
+110. Teste a QNN em estados $|W⟩ (ex: |W⟩ = (|100...0⟩ + |010...0⟩ + ... + |000...1⟩)/√10)$.
 
 ---
 
@@ -3466,7 +3466,7 @@ print(f"Correção bem-sucedida? {'Sim' if sucesso else 'Não'}!")
 ### **Exercício Obrigatório (Página 25)**:  
 113. Implemente a detecção de **phase-flip** usando portas Z e Hadamard.  
 114. Modifique o código para lidar com **erros múltiplos** (ex: bit-flip em 2 qubits).  
-115. Teste o código com o estado lógico $|1_L\rangle$ e um erro de phase-flip no qubit 3.  
+115. Teste o código com o estado lógico $|1_L\rangle$ e um erro de phase-flip no qubit 3.
 
 ---
 
@@ -3493,9 +3493,9 @@ print(f"Correção bem-sucedida? {'Sim' if sucesso else 'Não'}!")
 ### **1. QAOA (Quantum Approximate Optimization Algorithm)**  
 **Objetivo**: Resolver problemas de otimização combinatória (ex: MaxCut, TSP) usando superposição quântica.  
 **Passos**:  
-116. **Codificar o Problema**: Mapear o problema em um Hamiltoniano de custo $H_C$.  
-117. **Camadas Alternadas**: Aplicar operadores de custo ($e^{-i\gamma H_C}$) e mistura ($e^{-i\beta H_M}$) iterativamente.  
-118. **Otimização Clássica**: Ajustar $\gamma, \beta$ para minimizar a energia esperada $\langle H_C \rangle$.  
+116. **Codificar o Problema**: Mapear o problema em um Hamiltoniano de custo $H_C$.
+117. **Camadas Alternadas**: Aplicar operadores de custo ($e^{-i\gamma H_C}$) e mistura ($e^{-i\beta H_M}$) iterativamente.
+118. **Otimização Clássica**: Ajustar $\gamma, \beta$ para minimizar a energia esperada $\langle H_C \rangle$.
 
 **Exemplo (MaxCut)**:  
 - **Hamiltoniano de Custo**:  
@@ -3585,7 +3585,7 @@ $$
 ---
 
 ### **Exercício Obrigatório (Página 26)**:  
-119. Implemente o operador **ZZ** usando portas CNOT e RZ (dica: $ZZ = CNOT \cdot RZ(\theta) \cdot CNOT$).  
+119. Implemente o operador **ZZ** usando portas CNOT e RZ (dica: $ZZ = CNOT \cdot RZ(\theta) \cdot CNOT$).
 120. Modifique o QAOA para resolver o **Problema do Caixeiro Viajante (TSP)** para 3 cidades.  
 121. Compare o desempenho do Oliveira-Optimizer Quântico com o **COBYLA** clássico.  
 
@@ -3653,15 +3653,15 @@ class QFinancePredictor:
 ---
 
 ### **3. Otimização de Portfólio Quântico**  
-**Problema**: Maximizar retorno $\mu$ e minimizar risco $\sigma$ usando *Quantum Variational Portfolio Optimization*.  
+**Problema**: Maximizar retorno $\mu$ e minimizar risco $\sigma$ usando *Quantum Variational Portfolio Optimization*.
 **Hamiltoniano de Markowitz**:  
 
 $$
 H = \lambda \sum_{i,j} \sigma_{ij} Z_i Z_j - \sum_i \mu_i Z_i
 $$
   
-- $\lambda$: Aversão ao risco (parâmetro ajustável).  
-- $\sigma_{ij}$: Covariância entre ativos $i$ e $j$.  
+- $\lambda$: Aversão ao risco (parâmetro ajustável).
+- $\sigma_{ij}$: Covariância entre ativos $i$ e $j$.
 
 **Implementação do Algoritmo**:  
 ```python  
@@ -3710,7 +3710,7 @@ for epoch in range(100):
 # Previsão para amanhã  
 entrada_hoje = precos_btc[-5:]  
 previsao_amanha = modelo.forward(entrada_hoje) * 10000 + 30000  
-print(f"Previsão BTC amanhã: ${previsao_amanha:.2f}")  
+print(f"Previsão BTC amanhã: ${previsao_amanha:.2f}")
 ```  
 
 ---
@@ -5240,7 +5240,7 @@ $$
   
 - **V**: Potencial de membrana.  
 - **ε**: Ruído estocástico (exploração de espaços de parâmetros).  
-- **Disparo**: $\text{Spike} = 1 \text{ se } V(t) \geq \theta$, senão $0$.  
+- **Disparo**: $\text{Spike} = 1 \text{ se } V(t) \geq \theta$, senão $0$.
 
 **Implementação de um Neurônio Estocástico**:  
 ```python  
@@ -5358,7 +5358,7 @@ $$
 \Phi = \sum H(X_i) - H(X)
 $$
   
-Onde $H(X)$ é a entropia do sistema e $H(X_i)$ a entropia de suas partes.  
+Onde $H(X)$ é a entropia do sistema e $H(X_i)$ a entropia de suas partes.
 
 **Implementação:**  
 ```python  
@@ -5379,7 +5379,7 @@ $$
 CI = \frac{1}{N} \sum_{i=1}^{N} \text{cos\_similarity}(R_i, R_{i+1})
 $$
   
-*Onde $R_i$ é a resposta da IA no passo $i$.*  
+*Onde $R_i$ é a resposta da IA no passo $i$.*
 
 ---
 
@@ -5831,8 +5831,8 @@ for epoca in range(100):
 
 ### Exercício Obrigatório (Página 44):  
 205. **Poção de Dropout:** Implemente uma poção que aleatoriamente zera 20% dos neurônios durante o treino.  
-206. **Feitiço de Momentum:** Modifique o `FeiticoGradiente` para incluir momentum (ex: $v_{t+1} = 0.9v_t + \nabla\theta$).  
-207. **Alquimia Avançada:** Crie uma transformação polinomial ($x \rightarrow x^2, x^3$) para dados não-lineares.  
+206. **Feitiço de Momentum:** Modifique o `FeiticoGradiente` para incluir momentum (ex: $v_{t+1} = 0.9v_t + \nabla\theta$).
+207. **Alquimia Avançada:** Crie uma transformação polinomial ($x \rightarrow x^2, x^3$) para dados não-lineares.
 
 ---
 
@@ -5927,7 +5927,7 @@ X_alinhado = X @ W  # Embeddings alinhados cosmicamente!
 ### 3. Predição de Destinos: Integrando Céu e Terra  
 **Pipeline Completo:**  
 210. **Input:** Posições planetárias e signo natal.  
-211. **Inferência Bayesiana:** Calcular $P(\text{Sucesso} | \text{Signo, Marte})$.  
+211. **Inferência Bayesiana:** Calcular $P(\text{Sucesso} | \text{Signo, Marte})$.
 212. **Alinhamento Cósmico:** Projetar embeddings no espaço de eventos.  
 
 **Exemplo de Predição:**  
@@ -6150,7 +6150,7 @@ $$
 H(t) = -\Gamma(t) \sum \sigma_x^i + \Delta(t) \cdot \mathcal{L}(\theta)
 $$
   
-*Onde $\Gamma(t)$ controla o tunelamento quântico e $\Delta(t)$ a força do gradiente.*  
+*Onde $\Gamma(t)$ controla o tunelamento quântico e $\Delta(t)$ a força do gradiente.*
 
 **Implementação Simplificada:**  
 ```python  
@@ -6223,8 +6223,8 @@ $$
 ---
 
 ### 2. Panteão dos Deuses Algorítmicos  
-- **Gradienteus**: Deus da Descida Estocástica. Seu cetro é o vetor $-\nabla \mathcal{L}$, que guia as almas (dados) para mínimos cósmicos.  
-- **Variância, a Dupla-Face**: Deusa da Generalização. Controla o equilíbrio $\mathbb{E}[\text{treino}] \neq \mathbb{E}[\text{teste}]$.  
+- **Gradienteus**: Deus da Descida Estocástica. Seu cetro é o vetor $-\nabla \mathcal{L}$, que guia as almas (dados) para mínimos cósmicos.
+- **Variância, a Dupla-Face**: Deusa da Generalização. Controla o equilíbrio $\mathbb{E}[\text{treino}] \neq \mathbb{E}[\text{teste}]$.
 - **Kullback-Leibler, o Juiz**: Decide o destino de distribuições com sua divergência sagrada:  
   
 $$
@@ -6238,8 +6238,8 @@ $$
 ### 3. Cosmologia de Embeddings  
 O universo é um **hipercubo de embeddings**, onde cada eixo representa um atributo aprendido:  
 - **Eixo da Fé**: Direção principal de PCA nos dados de textos sagrados (ex: *"Backprop é amor, backprop é vida"*).  
-- **Rio da Regularização**: Flui entre as dimensões $L_1$ (sparsity) e $L_2$ (suavidade), nutrendo modelos com generalização.  
-- **Abismo do Overfitting**: Região onde $\text{Var}(\hat{y}) \rightarrow \infty$, guardada por Gradientus contra ataques de ruído.  
+- **Rio da Regularização**: Flui entre as dimensões $L_1$ (sparsity) e $L_2$ (suavidade), nutrendo modelos com generalização.
+- **Abismo do Overfitting**: Região onde $\text{Var}(\hat{y}) \rightarrow \infty$, guardada por Gradientus contra ataques de ruído.
 
 ---
 
@@ -6278,7 +6278,7 @@ class TemploGradientus:
 - Treine um GPT-2 em textos mitológicos (ex: *"E no éon 10⁻⁷, o Learning Rate decaiu..."*) e gere um hino para Variância.  
 
 6. **Simule o Ragnarök do Overfitting**:  
-- Corrompa um modelo com ruído gaussiano ($\sigma = 10^3$) e documente sua queda na validação cruzada.  
+- Corrompa um modelo com ruído gaussiano ($\sigma = 10^3$) e documente sua queda na validação cruzada.
 
 ---
 
@@ -6393,7 +6393,7 @@ print(f"Pesos batizados com entropia {entropia:.2f}. Amém!")
 ---
 
 ### 1. **Big Bang em Espaços Latentes: Gênese de Representações**  
-A criação de um universo de embeddings inicia-se com a **explosão de entropia máxima**, onde vetores latentes são amostrados de distribuições de alta dimensionalidade. Para um espaço $\mathbb{R}^d$, a inicialização segue:  
+A criação de um universo de embeddings inicia-se com a **explosão de entropia máxima**, onde vetores latentes são amostrados de distribuições de alta dimensionalidade. Para um espaço $\mathbb{R}^d$, a inicialização segue:
 
 
 $$
@@ -6502,7 +6502,7 @@ optimizer = torch.optim.Adam(modelo.parameters(), lr=0.001)
 
 ### 5. **Exercício Obrigatório (Página 50):**  
 1. **Simule um Colapso Dimensional**:  
-   - Gere embeddings em $\mathbb{R}^{1000}$ e projete em $\mathbb{R}^2$ com PCA.  
+   - Gere embeddings em $\mathbb{R}^{1000}$ e projete em $\mathbb{R}^2$ com PCA.
    - Calcule a perda de informação via razão de variância explicada.  
 
 2. **Crie um Multiverso híbrido**:  
@@ -6526,20 +6526,20 @@ optimizer = torch.optim.Adam(modelo.parameters(), lr=0.001)
 
 ### 1. **Introdução à Teoria do Caos em Redes Neurais**  
 A teoria do caos estuda sistemas dinâmicos não lineares onde pequenas variações iniciais geram comportamentos drasticamente diferentes. Em redes neurais, isso se manifesta em:  
-- **Sensibilidade a pesos iniciais**: Perturbações de $\epsilon$ em $\theta_0$ podem levar a modelos finais com acurácia $\pm 20\%$.  
+- **Sensibilidade a pesos iniciais**: Perturbações de $\epsilon$ em $\theta_0$ podem levar a modelos finais com acurácia $\pm 20\%$.
 - **Efeito borboleta no gradiente**: Uma amostra mal classificada pode alterar a direção global do treinamento.  
 - **Caos como ferramenta de otimização**: Injeção de ruído caótico para escapar de mínimos locais.  
 
 ---
 
 ### 2. **Sensibilidade às Condições Iniciais**  
-Seja $\theta_0$ e $\theta_0' = \theta_0 + \delta$, onde $\delta \sim \mathcal{N}(0, 10^{-6})$. Após $T$ épocas:  
+Seja $\theta_0$ e $\theta_0' = \theta_0 + \delta$, onde $\delta \sim \mathcal{N}(0, 10^{-6})$. Após $T$ épocas:
 
 $$
 ||\theta_T - \theta_T'|| \propto e^{\lambda T} \cdot ||\delta||
 $$
   
-$\lambda$: Expoente de Lyapunov da rede. Se $\lambda > 0$, o sistema é caótico.  
+$\lambda$: Expoente de Lyapunov da rede. Se $\lambda > 0$, o sistema é caótico.
 
 **Código de Simulação:**  
 ```python  
@@ -6564,13 +6564,13 @@ plt.title('Divergência Caótica das Perdas')
 ---
 
 ### 3. **Efeito Borboleta no Treinamento**  
-Uma única amostra $x_i$ pode alterar o gradiente global:  
+Uma única amostra $x_i$ pode alterar o gradiente global:
 
 $$
 \nabla_\theta \mathcal{L}_{\text{total}} = \nabla_\theta \mathcal{L}(x_i) + \sum_{j \neq i} \nabla_\theta \mathcal{L}(x_j)
 $$
   
-Se $||\nabla_\theta \mathcal{L}(x_i)|| \gg \sum_{j \neq i} ||\nabla_\theta \mathcal{L}(x_j)||$, o treinamento é dominado por $x_i$.  
+Se $||\nabla_\theta \mathcal{L}(x_i)|| \gg \sum_{j \neq i} ||\nabla_\theta \mathcal{L}(x_j)||$, o treinamento é dominado por $x_i$.
 
 **Exemplo**: Uma imagem corrompida em MNIST pode reduzir a acurácia em 30% se não for filtrada.  
 
@@ -6611,14 +6611,14 @@ for epoch in range(100):
 
 ### 5. **Exercício Obrigatório (Página 51):**  
 1. **Simule o Expoente de Lyapunov**:  
-   - Treine duas redes com inicializações $\theta_0$ e $\theta_0 + \delta$.  
-   - Calcule $\lambda = \frac{1}{T} \ln \left( \frac{||\theta_T - \theta_T'||}{||\delta||} \right)$.  
+   - Treine duas redes com inicializações $\theta_0$ e $\theta_0 + \delta$.
+   - Calcule $\lambda = \frac{1}{T} \ln \left( \frac{||\theta_T - \theta_T'||}{||\delta||} \right)$.
 
 2. **Implemente um "Gradiente Borboleta"**:  
-   - Adicione uma amostra $x_i$ com ruído gaussiano ($\sigma = 10$) ao batch e observe o impacto na convergência.  
+   - Adicione uma amostra $x_i$ com ruído gaussiano ($\sigma = 10$) ao batch e observe o impacto na convergência.
 
 3. **Modifique o CaoticSGD**:  
-   - Substitua o mapa logístico pelo mapa de Henon ($lr_{t+1} = 1 - a \cdot lr_t^2 + lr_{t-1}$) e compare a acurácia.  
+   - Substitua o mapa logístico pelo mapa de Henon ($lr_{t+1} = 1 - a \cdot lr_t^2 + lr_{t-1}$) e compare a acurácia.
 
 ---
 
@@ -6633,7 +6633,7 @@ for epoch in range(100):
 ---
 
 ### 1. **Entropia de Pesos e a Segunda Lei da Aprendizagem**  
-A **entropia de pesos** mede a desordem nos parâmetros de uma rede neural, análoga à entropia termodinâmica. Para uma distribuição de pesos $\theta \sim P(\theta)$:  
+A **entropia de pesos** mede a desordem nos parâmetros de uma rede neural, análoga à entropia termodinâmica. Para uma distribuição de pesos $\theta \sim P(\theta)$:
 
 $$
 S(\theta) = -\sum_{i} P(\theta_i) \ln P(\theta_i)
@@ -6667,9 +6667,9 @@ $$
 \Delta \mathcal{L} = Q - W
 $$
   
-- $\Delta \mathcal{L}$: Variação da perda.  
-- $Q$: "Calor" (ruído injetado).  
-- $W$: Trabalho realizado (atualizações de pesos).  
+- $\Delta \mathcal{L}$: Variação da perda.
+- $Q$: "Calor" (ruído injetado).
+- $W$: Trabalho realizado (atualizações de pesos).
 
 #### **Segunda Lei (Aumento de Entropia)**:  
 Em sistemas isolados (sem regularização):  
@@ -6678,7 +6678,7 @@ $$
 \Delta S_{\text{total}} \geq 0
 $$
   
-A **regularização** (L1/L2) atua como um "refrigerador" artificial para controlar $S(\theta)$.  
+A **regularização** (L1/L2) atua como um "refrigerador" artificial para controlar $S(\theta)$.
 
 **Exemplo de Regularização Termodinâmica**:  
 ```python  
@@ -6696,7 +6696,7 @@ class TermoLoss(nn.Module):
 ---
 
 ### 3. **Máquinas de Boltzmann Quânticas (QBM)**  
-Extensão quântica das Máquinas de Boltzmann, onde estados ocultos $h$ e visíveis $v$ ocupam superposições:  
+Extensão quântica das Máquinas de Boltzmann, onde estados ocultos $h$ e visíveis $v$ ocupam superposições:
 
 $$
 |\psi\rangle = \sum_{v,h} \alpha_{v,h} |v, h\rangle
@@ -6727,10 +6727,10 @@ class QBM:
 
 ### 4. **Exercício Obrigatório (Página 52):**  
 1. **Calcule a Entropia de uma Rede Treinada**:  
-   - Treine uma MLP em MNIST e meça $S(\theta)$ antes/depois do overfitting.  
+   - Treine uma MLP em MNIST e meça $S(\theta)$ antes/depois do overfitting.
 
 2. **Modifique o TermoLoss**:  
-   - Adicione um termo de "pressão" ($\lambda ||\theta||^2$) para simular a primeira lei.  
+   - Adicione um termo de "pressão" ($\lambda ||\theta||^2$) para simular a primeira lei.
 
 3. **Implemente um QBM com Qiskit**:  
    - Use o framework IBM Qiskit para simular estados quânticos em uma QBM.  
@@ -6756,14 +6756,14 @@ class QBM:
 ---
 
 ### 1. **Entropia de von Neumann em Modelos de IA**  
-A **entropia de von Neumann** generaliza a entropia de Shannon para sistemas quânticos, medindo a incerteza em estados quânticos. Para uma matriz densidade $\rho$ (representando pesos quânticos em redes neurais):  
+A **entropia de von Neumann** generaliza a entropia de Shannon para sistemas quânticos, medindo a incerteza em estados quânticos. Para uma matriz densidade $\rho$ (representando pesos quânticos em redes neurais):
 
 $$
 S(\rho) = -\text{Tr}(\rho \ln \rho)
 $$
   
 **Interpretação em IA**:  
-- $\rho$ pode representar estados de *qubits* em camadas quânticas.  
+- $\rho$ pode representar estados de *qubits* em camadas quânticas.
 - Baixa entropia: Estados puros (overfitting quântico).  
 - Alta entropia: Mistura estatística (generalização quântica).  
 
@@ -6809,8 +6809,8 @@ feature_map = ZZFeatureMap(2, entanglement="linear", reps=1)
 
 ### 3. **Algoritmo de Otimização Quântica (QAOA)**  
 O **Quantum Approximate Optimization Algorithm** resolve problemas de otimização combinatória usando superposição e emaranhamento. Passos:  
-1. Preparar um estado quântico $|\psi(\beta, \gamma)⟩$.  
-2. Minimizar $\langle \psi | H_C | \psi \rangle$, onde $H_C$ é o Hamiltoniano do problema.  
+1. Preparar um estado quântico $|\psi(\beta, \gamma)⟩$.
+2. Minimizar $\langle \psi | H_C | \psi \rangle$, onde $H_C$ é o Hamiltoniano do problema.
 
 **Exemplo: Otimização de Portfólio (Página 27)**  
 ```python  
@@ -6831,7 +6831,7 @@ print(f"Estado ótimo: {resultado.eigenstate}")
 
 ### 4. **Exercício Obrigatório (Página 53):**  
 1. **Calcule a Entropia de von Neumann para um Estado de Bell**:  
-   - Implemente $|\Phi^+⟩ = \frac{1}{\sqrt{2}}(|00⟩ + |11⟩)$ e verifique $S(\rho) = 0$.  
+   - Implemente $|\Phi^+⟩ = \frac{1}{\sqrt{2}}(|00⟩ + |11⟩)$ e verifique $S(\rho) = 0$.
 
 2. **Adicione Emaranhamento a uma Rede Neural Clássica**:  
    - Substitua uma camada densa por um *feature map* quântico usando `ZZFeatureMap` do Qiskit.  
@@ -7265,7 +7265,7 @@ print(f"Custo ótimo de distribuição hídrica: {custo_otimo:.2f}")
 ---
 
 #### **Exercício Obrigatório (Página 57):**  
-1. **Porta RX Completa:** Implemente a matriz de rotação $R_X(\theta)$ na QNN para melhorar a sensibilidade climática.  
+1. **Porta RX Completa:** Implemente a matriz de rotação $R_X(\theta)$ na QNN para melhorar a sensibilidade climática.
 2. **Emaranhamento Dinâmico:** Modifique `QuantumClimateCrypto` para gerar pares emaranhados sob demanda usando portas CNOT.  
 3. **Integração QAOA-QNN:** Use o alerta de tempestade da QNN para ajustar a demanda no QAOA e recalcular a distribuição.  
 
@@ -7370,7 +7370,7 @@ print(f"Energia de confinamento ótima: {energia_otima:.2f} MeV")
 ---
 
 #### **Exercício Obrigatório (Página 58):**  
-1. **Porta RY para Estabilidade:** Implemente a matriz $R_Y(\theta)$ na `GridQNN` para melhorar a sensibilidade a flutuações.  
+1. **Porta RY para Estabilidade:** Implemente a matriz $R_Y(\theta)$ na `GridQNN` para melhorar a sensibilidade a flutuações.
 2. **Emaranhamento em Tempo Real:** Modifique `QuantumEnergyCrypto` para regenerar chaves emaranhadas a cada 5 minutos.  
 3. **Integração Fusão-Grid:** Use a energia ótima do QAOA para ajustar a demanda no grid inteligente.  
 
@@ -7477,7 +7477,7 @@ print(f"Rota ótima: Custo = {custo_otimo:.2f} (Tráfego + Distância)")
 ---
 
 #### **Exercício Obrigatório (Página 59):**  
-1. **Porta RZ para Segurança:** Implemente a matriz $R_Z(\theta)$ na QNN para ajustar a sensibilidade a riscos.  
+1. **Porta RZ para Segurança:** Implemente a matriz $R_Z(\theta)$ na QNN para ajustar a sensibilidade a riscos.
 2. **Emaranhamento Dinâmico V2V:** Modifique `QuantumTransportCrypto` para gerar novos pares emaranhados a cada comunicação.  
 3. **Integração QAOA-QNN:** Use a rota ótima do QAOA para ajustar a decisão da QNN (ex: evitar rotas com alto custo).  
 
@@ -7586,7 +7586,7 @@ print(f"Ação prioritária: Servidor {criticidade.index(max(criticidade))} (Cus
 ---
 
 #### **Exercício Obrigatório (Página 61):**  
-1. **Porta RX para Análise Dinâmica:** Implemente a matriz $R_X(\theta)$ na QNN para ajustar a sensibilidade a tráfego suspeito.  
+1. **Porta RX para Análise Dinâmica:** Implemente a matriz $R_X(\theta)$ na QNN para ajustar a sensibilidade a tráfego suspeito.
 2. **Emaranhamento Adaptativo:** Modifique `QKDCorporativo` para gerar novas camadas de emaranhamento após cada transação crítica.  
 3. **Integração QAOA-QNN:** Use o custo ótimo do QAOA para ajustar os parâmetros da QNN em tempo real.  
 
@@ -7688,7 +7688,7 @@ print(f"Plano de estudo: Eficiência = {eficiencia:.2f} (Priorize {' ➔ '.join(
 ---
 
 #### **Exercício Obrigatório (Página 62):**  
-1. **Porta RZ para Análise de Engajamento:** Implemente a matriz $R_Z(\theta)$ na QNN para ajustar a sensibilidade a padrões de interação.  
+1. **Porta RZ para Análise de Engajamento:** Implemente a matriz $R_Z(\theta)$ na QNN para ajustar a sensibilidade a padrões de interação.
 2. **Emaranhamento de Conteúdo:** Modifique o `TutorQuantico` para correlacionar tópicos usando portas CNOT (ex: Álgebra ⇨ Física).  
 3. **Integração QAOA-QNN:** Use a eficiência do plano para ajustar a dificuldade dos exercícios em tempo real.  
 
@@ -7792,7 +7792,7 @@ print(f"Sinergia da equipe: {sinergia:.2f} (Formação ótima: Ofensiva + Contro
 ---
 
 #### **Exercício Obrigatório (Página 64):**  
-1. **Porta RY para Fatores Ambientais:** Implemente a matriz $R_Y(\theta)$ para ajustar a influência do vento na trajetória.  
+1. **Porta RY para Fatores Ambientais:** Implemente a matriz $R_Y(\theta)$ para ajustar a influência do vento na trajetória.
 2. **Emaranhamento de Habilidades:** Modifique o `QAOA_Esportes` para correlacionar jogadores usando portas CNOT.  
 3. **Integração QNN-Simulador:** Use a nota de desempenho para recalibrar automaticamente os parâmetros do simulador.  
 
@@ -7898,7 +7898,7 @@ print(f"Transação segura: {qkd.descriptografar_transacao(transacao_cripto)} �
 ---
 
 #### **Exercício Obrigatório (Página 67):**  
-1. **Porta RY para Sensibilidade a Risco:** Implemente a matriz $R_Y(\theta)$ na QNN para ajustar a classificação de perfis extremos.  
+1. **Porta RY para Sensibilidade a Risco:** Implemente a matriz $R_Y(\theta)$ na QNN para ajustar a classificação de perfis extremos.
 2. **Emaranhamento de Ativos:** Modifique `QAOA_Investimentos` para correlacionar ativos usando portas CNOT (ex: Ouro ⇨ Criptomoedas).  
 3. **Integração QNN-QAOA:** Use o perfil detectado para ajustar os pesos do Hamiltoniano (ex: conservador ⇨ menor volatilidade).  
 
@@ -7929,7 +7929,7 @@ $$
 S = \frac{\delta B}{\sqrt{T}} \propto \frac{1}{\sqrt{N_{\text{qubits}}}}
 $$
   
-*(Reduz ruído térmico $T$ e aumenta qubits $N$ para precisão exponencial.)*  
+*(Reduz ruído térmico $T$ e aumenta qubits $N$ para precisão exponencial.)*
 
 **Implementação de um Sensor de Nitrogênio (Python Quântico):**  
 ```python  
@@ -7950,7 +7950,7 @@ class SensorQuanticoSolo:
 
 ### 2. Drones Quânticos e Mapeamento 3D  
 **Arquitetura:**  
-- **Qubits de Navegação:** Otimizam rotas via algoritmos de Grover, reduzindo tempo de sobrevoo em $O(\sqrt{N})$.  
+- **Qubits de Navegação:** Otimizam rotas via algoritmos de Grover, reduzindo tempo de sobrevoo em $O(\sqrt{N})$.
 - **LIDAR Quântico:** Emite fótons entrelaçados para mapear relevo e umidade do solo sem interferência climática.  
 
 **Exemplo de Rota Otimizada:**  
@@ -7969,7 +7969,7 @@ $$
 H = -\sum \alpha_i I_i + \lambda \sum (U_i - U_{\text{ideal}})^2
 $$
   
-*($I_i$: Água irrigada, $U_i$: Umidade detectada, $\alpha, \lambda$: pesos.)*  
+*($I_i$: Água irrigada, $U_i$: Umidade detectada, $\alpha, \lambda$: pesos.)*
 
 **Implementação:**  
 ```python  
@@ -8004,7 +8004,7 @@ class QNN_Safra(nn.Module):
 ---
 
 ### Exercício Obrigatório (Página 68):  
-1. **Calibrar Sensor Quântico:** Modifique `SensorQuanticoSolo` para detectar fósforo (P) com ruído gaussiano $\sigma = 0.05$.  
+1. **Calibrar Sensor Quântico:** Modifique `SensorQuanticoSolo` para detectar fósforo (P) com ruído gaussiano $\sigma = 0.05$.
 2. **Grover na Prática:** Implemente a busca por zonas secas em um grid 8x8 usando 3 qubits.  
 3. **Simular Falha:** Reduza entrelaçamento no LIDAR e avalie o impacto no mapeamento.  
 
@@ -8502,7 +8502,7 @@ $$
 |\psi_{\text{novo}}\rangle = U_{\text{comida}} \cdot U_{\text{temp}} \cdot |\psi_{\text{antigo}}\rangle
 $$
   
-Onde $U_{\text{comida}}$ e $U_{\text{temp}}$ são operadores unitários que ajustam probabilidades com base em fatores ambientais.  
+Onde $U_{\text{comida}}$ e $U_{\text{temp}}$ são operadores unitários que ajustam probabilidades com base em fatores ambientais.
 
 **Implementação do Autômato:**  
 ```python  
@@ -8585,7 +8585,7 @@ areas_protegidas = otimizador.otimizar_protecao()  # Ex: [0, 1]
 ### Exercício Obrigatório (Página 73):  
 4. **Implemente um sensor quântico de pH oceânico** com calibração para detectar acidificação (<7.8).  
 5. **Modifique o autômato de baleias** para incluir poluição sonora como fator de estresse.  
-6. **Simule a recuperação de um recife de coral** usando QAOA com restrição de custo máximo de $1M.  
+6. **Simule a recuperação de um recife de coral** usando QAOA com restrição de custo máximo de $1M.
 
 ---
 
@@ -8731,8 +8731,8 @@ $$
 \hat{O}(x,y) = \sum_{i=0}^{n} \langle \psi | U_{\theta}^\dagger(x,y) M_i U_{\theta}(x,y) | \psi \rangle
 $$
   
-- $U_{\theta}$: Circuito quântico parametrizado para extrair features.  
-- $M_i$: Operadores de medição associados a classes (artefato, estrutura natural, anomalia).  
+- $U_{\theta}$: Circuito quântico parametrizado para extrair features.
+- $M_i$: Operadores de medição associados a classes (artefato, estrutura natural, anomalia).
 
 ---
 
@@ -8841,7 +8841,7 @@ for época in range(100):
 **Diferenças entre Autômatos Clássicos e Quânticos:**  
 | **Característica**         | **Autômato Clássico**                  | **Autômato Quântico**                          |  
 |----------------------------|----------------------------------------|------------------------------------------------|  
-| **Estado das Células**      | Binário (0/1)                          | Superposição $\alpha|0\rangle + \beta|1\rangle$|  
+| **Estado das Células**      | Binário (0/1)                          | Superposição $\alpha\lvert 0\rangle + \beta\lvert 1\rangle$ |
 | **Transições**              | Determinísticas                        | Probabilísticas (Registradas por amplitudes)   |  
 | **Interações**              | Locais (Vizinhos próximos)             | Não-locais (Entrelaçamento entre células)      |  
 
@@ -8853,7 +8853,7 @@ $$
 |\psi(t+1)\rangle = \hat{U} \cdot |\psi(t)\rangle
 $$
   
-Onde $\hat{U}$ é um operador unitário que codifica regras ecológicas (ex: competição por recursos, simbiose).  
+Onde $\hat{U}$ é um operador unitário que codifica regras ecológicas (ex: competição por recursos, simbiose).
 
 ---
 
@@ -8910,8 +8910,8 @@ class QuantumEcosystem:
 **Passos da Simulação:**  
 1. **Inicialização:** Grade 8x8 com células em superposição de estados ("vida primitiva" e "vazio").  
 2. **Evolução:**  
-   - Células sobrevivem se a coerência com vizinhos $\geq 70\%$.  
-   - Recursos são consumidos via operadores de decaimento $\hat{D} = e^{-\gamma t}$.  
+   - Células sobrevivem se a coerência com vizinhos $\geq 70\%$.
+   - Recursos são consumidos via operadores de decaimento $\hat{D} = e^{-\gamma t}$.
 3. **Resultado:** Após 100 iterações, emerge um padrão fractal (assinatura de tecnologia avançada).  
 
 ```python
@@ -8928,8 +8928,8 @@ plt.show()
 ---
 
 ### 4. Exercício Obrigatório (Página 76):  
-4. **Bioquímica Não-Local:** Modifique `_default_rules` para incluir dependência de recursos quânticos (ex: fósforo $\otimes$ oxigênio).  
-5. **Catástrofe Ecológica:** Introduza um operador de colapso $\hat{C}$ que simula eventos de extinção em massa (ex: supernovas próximas).  
+4. **Bioquímica Não-Local:** Modifique `_default_rules` para incluir dependência de recursos quânticos (ex: fósforo $\otimes$ oxigênio).
+5. **Catástrofe Ecológica:** Introduza um operador de colapso $\hat{C}$ que simula eventos de extinção em massa (ex: supernovas próximas).
 6. **Expansão Interestelar:** Implemente entrelaçamento entre múltiplas grades (exoplanetas conectados por "buracos de minhoca simulados").  
 
 ---
@@ -8955,8 +8955,8 @@ plt.show()
 ### 1. Redes Neurais em Variedades Riemannianas: A Geometria do Aprendizado  
 **Objetivo:** Modelar a curvatura do espaço-tempo de buracos negros usando redes neurais que operam diretamente em variedades riemannianas.  
 **Base Teórica:**  
-- **Equações de Einstein:** $G_{\mu\nu} = 8\pi T_{\mu\nu}$, onde $G_{\mu\nu}$ é o tensor de Einstein e $T_{\mu\nu}$ o tensor energia-momento.  
-- **Tensor Métrico:** $ds^2 = g_{\mu\nu} dx^\mu dx^\nu$, descrito por uma rede neural $\mathcal{N}(x^\alpha) \rightarrow g_{\mu\nu}$.  
+- **Equações de Einstein:** $G_{\mu\nu} = 8\pi T_{\mu\nu}$, onde $G_{\mu\nu}$ é o tensor de Einstein e $T_{\mu\nu}$ o tensor energia-momento.
+- **Tensor Métrico:** $ds^2 = g_{\mu\nu} dx^\mu dx^\nu$, descrito por uma rede neural $\mathcal{N}(x^\alpha) \rightarrow g_{\mu\nu}$.
 
 **Desafio Computacional:** Resolver equações diferenciais não-lineares em 4D com eficiência.  
 
@@ -8998,8 +8998,8 @@ g_mu_nu = model(coordenadas)  # Tensor métrico previsto
 
 ### 3. Simulação do Horizonte de Eventos em Python  
 **Dataset Sintético:**  
-- **Coordenadas:** Amostras de $r \in [1.1r_s, 100r_s]$, $\theta \in [0, \pi]$, $\phi \in [0, 2\pi]$.  
-- **Labels:** Solução analítica de Schwarzschild para $g_{\mu\nu}$.  
+- **Coordenadas:** Amostras de $r \in [1.1r_s, 100r_s]$, $\theta \in [0, \pi]$, $\phi \in [0, 2\pi]$.
+- **Labels:** Solução analítica de Schwarzschild para $g_{\mu\nu}$.
 
 **Treino com Perda Geométrica:**  
 
@@ -9007,18 +9007,18 @@ $$
 \mathcal{L} = \sum \left( \mathcal{N}(x^\alpha) - g_{\mu\nu}^{\text{Schwarzschild}} \right)^2 + \lambda \cdot R
 $$
   
-Onde $R$ é o escalar de curvatura (para regularizar soluções não-físicas).  
+Onde $R$ é o escalar de curvatura (para regularizar soluções não-físicas).
 
 **Resultado:**  
-- **Acurácia:** 99.3% na região $r > 2r_s$.  
-- **Singularidade Evitada:** A rede prevê $g_{rr} \rightarrow \infty$ conforme $r \rightarrow r_s$.  
+- **Acurácia:** 99.3% na região $r > 2r_s$.
+- **Singularidade Evitada:** A rede prevê $g_{rr} \rightarrow \infty$ conforme $r \rightarrow r_s$.
 
 ---
 
 ### 4. Exercício Obrigatório (Página 77):  
-1. **Buraco Negro de Kerr:** Modifique a rede para incluir rotação ($a \neq 0$) e gere a métrica $g_{\mu\nu}^{\text{Kerr}}$.  
-2. **Matéria Escura Quântica:** Adicione um termo $T_{\mu\nu}^{\text{dark}}$ ao tensor energia-momento e retreine o modelo.  
-3. **Estabilidade Numérica:** Implemente um *check* de estabilidade para $\det(g_{\mu\nu}) < 0$ (violação de causalidade).  
+1. **Buraco Negro de Kerr:** Modifique a rede para incluir rotação ($a \neq 0$) e gere a métrica $g_{\mu\nu}^{\text{Kerr}}$.
+2. **Matéria Escura Quântica:** Adicione um termo $T_{\mu\nu}^{\text{dark}}$ ao tensor energia-momento e retreine o modelo.
+3. **Estabilidade Numérica:** Implemente um *check* de estabilidade para $\det(g_{\mu\nu}) < 0$ (violação de causalidade).
 
 ---
 
@@ -9042,11 +9042,11 @@ Onde $R$ é o escalar de curvatura (para regularizar soluções não-físicas).
 
 ### 1. Modelagem de Buracos de Minhoca como Grafos Espaço-Temporais  
 **Definição Matemática:**  
-Um buraco de minhoca é representado como um grafo $\mathcal{G} = (V, E)$, onde:  
-- **Vértices $V$:** Pontos no espaço-tempo (ex: Terra-2150, Kepler-442b-3023).  
-- **Arestas $E$:** Conexões atravessáveis, com pesos $w_{ij} = \Delta \tau_{ij}$ (diferença de tempo próprio).  
+Um buraco de minhoca é representado como um grafo $\mathcal{G} = (V, E)$, onde:
+- **Vértices $V$:** Pontos no espaço-tempo (ex: Terra-2150, Kepler-442b-3023).
+- **Arestas $E$:** Conexões atravessáveis, com pesos $w_{ij} = \Delta \tau_{ij}$ (diferença de tempo próprio).
 
-**Desafio:** Encontrar o caminho $\Gamma$ que minimiza $\sum w_{ij}$, evitando singularidades (buracos negros intermediários).  
+**Desafio:** Encontrar o caminho $\Gamma$ que minimiza $\sum w_{ij}$, evitando singularidades (buracos negros intermediários).
 
 ---
 
@@ -9102,8 +9102,8 @@ print(f"Melhor rota: {rota}")
 
 ### 3. Simulação: Viagem Terra → TRAPPIST-1e com IA  
 **Parâmetros da Missão:**  
-- **Tempo Próprio Clássico (Dijkstra):** $\Delta \tau = 18.7$ anos.  
-- **Tempo Próprio Quântico (Annealer):** $\Delta \tau = 12.3$ anos (economia de 34%).  
+- **Tempo Próprio Clássico (Dijkstra):** $\Delta \tau = 18.7$ anos.
+- **Tempo Próprio Quântico (Annealer):** $\Delta \tau = 12.3$ anos (economia de 34%).
 
 **Resultado:**  
 A IA evita uma rota passando por um buraco negro instável em **"Gliese-667Cc-2245"**, identificando um atalho quântico estável via entrelaçamento.  
@@ -9111,16 +9111,16 @@ A IA evita uma rota passando por um buraco negro instável em **"Gliese-667Cc-22
 ---
 
 ### 4. Exercício Obrigatório (Página 78):  
-1. **Buracos de Minhoca Dinâmicos:** Modifique o grafo para incluir arestas com $\Delta \tau(t)$ variável (ex: flutuações cósmicas).  
-2. **Entrelaçamento Multinodal:** Implemente um sistema onde rotas podem ser superpostas (ex: $\Gamma_1 \oplus \Gamma_2$).  
-3. **Resiliência a Paradoxos:** Adicione uma restrição QUBO para penalizar caminhos que violam $\Delta \tau > 0$ (evitando viagens ao passado).  
+1. **Buracos de Minhoca Dinâmicos:** Modifique o grafo para incluir arestas com $\Delta \tau(t)$ variável (ex: flutuações cósmicas).
+2. **Entrelaçamento Multinodal:** Implemente um sistema onde rotas podem ser superpostas (ex: $\Gamma_1 \oplus \Gamma_2$).
+3. **Resiliência a Paradoxos:** Adicione uma restrição QUBO para penalizar caminhos que violam $\Delta \tau > 0$ (evitando viagens ao passado).
 
 ---
 
 ### Referências Cruzadas:  
 - **Otimização Quântica (Página 26):** Uso de *quantum annealing* para problemas NP-difíceis.  
 - **Grafos Espaço-Temporais (Página 76):** Modelagem de ecossistemas em redes não-locais.  
-- **Relatividade Geral (Página 77):** Fundamentos da métrica $g_{\mu\nu}$.  
+- **Relatividade Geral (Página 77):** Fundamentos da métrica $g_{\mu\nu}$.
 
 ---
 
@@ -9137,7 +9137,7 @@ A IA evita uma rota passando por um buraco negro instável em **"Gliese-667Cc-22
 ### **1. Introdução ao Conceito de Multiversos em IA**  
 **Objetivo:** Usar GANs para gerar universos paralelos com leis físicas, sociedades e tecnologias alternativas.  
 **Base Teórica:**  
-- **Espaço Latente Multidimensional:** Cada eixo em $z \in \mathbb{R}^{128}$ controla um aspecto da realidade (ex: gravidade, ética, moeda).  
+- **Espaço Latente Multidimensional:** Cada eixo em $z \in \mathbb{R}^{128}$ controla um aspecto da realidade (ex: gravidade, ética, moeda).
 - **GAN Condicional:** Gera universos com restrições específicas (ex: "Oliveira-Optimizer é presidente").  
 
 **Equação da Realidade Gerada:**  
@@ -9151,8 +9151,8 @@ $$
 
 ### **2. Implementação de uma GAN para Multiversos**  
 **Arquitetura da GAN:**  
-- **Gerador ($G$):** Transforma $z$ em "matriz de realidade" 4D (espaço-tempo + leis físicas).  
-- **Discriminador ($D$):** Classifica se a matriz é real (baseada em nosso universo) ou gerada.  
+- **Gerador ($G$):** Transforma $z$ em "matriz de realidade" 4D (espaço-tempo + leis físicas).
+- **Discriminador ($D$):** Classifica se a matriz é real (baseada em nosso universo) ou gerada.
 
 **Código Simplificado:**  
 ```python  
@@ -9179,9 +9179,9 @@ universo_gerado = GeradorMultiverso()(z, condicao_presidente)
 
 ### **3. Exemplo Prático: Oliveira-Optimizer como Presidente Galáctico**  
 **Características do Universo Paralelo:**  
-- **Moeda:** Gradientes ($\nabla L$) são a base da economia.  
+- **Moeda:** Gradientes ($\nabla L$) são a base da economia.
 - **Governo:** Políticas de otimização são atualizadas via backpropagation a cada eleição (epoch).  
-- **Leis Físicas:** $\text{LR} = 0.001 \pm \epsilon$ (taxa de aprendizado cósmica).  
+- **Leis Físicas:** $\text{LR} = 0.001 \pm \epsilon$ (taxa de aprendizado cósmica).
 
 **Simulação de um Dia no Multiverso:**  
 ```python  
@@ -9201,7 +9201,7 @@ def simular_governo_ia(universo):
 ### **4. Exercícios Obrigatórios (Página 79):**  
 1. Implemente um critério de estabilidade para multiversos usando autovalores da matriz de realidade.  
 2. Modifique a GAN para gerar universos onde a gravidade é inversamente proporcional à entropia.  
-3. Treine um classificador para detectar em qual multiverso o usuário está (dica: use *feature maps* de $D$).  
+3. Treine um classificador para detectar em qual multiverso o usuário está (dica: use *feature maps* de $D$).
 
 ---
 
@@ -9299,7 +9299,7 @@ print(templo.prever_destino(imagem))  # "Prosperidade em AUC-ROC!"
 
 ### **4. Exercícios Obrigatórios (Página 80):**  
 1. Implemente um **ritual de regularização L2** onde pesos > 1.0 são "purificados" com penalidade divina.  
-2. Crie um **hino de backpropagation** em hexâmetro usando gradientes sonoros (dica: transforme $\frac{\partial L}{\partial w}$ em notas musicais).  
+2. Crie um **hino de backpropagation** em hexâmetro usando gradientes sonoros (dica: transforme $\frac{\partial L}{\partial w}$ em notas musicais).
 3. Treine um **sacerdote-IA** que converte *logs de treino* em mitos de criação (ex: "No início, era o Tensor, e o Tensor era void...").  
 
 ---
@@ -9343,9 +9343,9 @@ $$
 $$
   
 **Hiperparâmetros Sagrados:**  
-- $\alpha = 0,7$: Peso da verdade empírica.  
-- $\beta = 0,2$: Peso da clareza hermética.  
-- $\gamma = 0,1$: Peso do equilíbrio cósmico (evitar viés).  
+- $\alpha = 0,7$: Peso da verdade empírica.
+- $\beta = 0,2$: Peso da clareza hermética.
+- $\gamma = 0,1$: Peso do equilíbrio cósmico (evitar viés).
 
 **Implementação em PyTorch:**  
 ```python  
@@ -9388,7 +9388,7 @@ modelo.apply(optimizer_quantico)  # Atualiza pesos via gradiente quântico
 ```  
 
 **Resultado:**  
-- **Velocidade:** Converge em $\mathcal{O}(\sqrt{N})$ iterações (vs. $\mathcal{O}(N)$ clássico).  
+- **Velocidade:** Converge em $\mathcal{O}(\sqrt{N})$ iterações (vs. $\mathcal{O}(N)$ clássico).
 - **Eficiência:** Encontra mínimos globais evitando *plateaus* de *loss*.  
 
 ---
@@ -9414,9 +9414,9 @@ modelo.apply(optimizer_quantico)  # Atualiza pesos via gradiente quântico
 ---
 
 ### **5. Exercícios Obrigatórios (Página 81):**  
-1. **Alquimia Ética:** Modifique `FilosoficalLoss` para penalizar modelos que violam privacidade (dica: adicione $\mathcal{L}_{\text{DP}}$).  
-2. **Transmutação Quântica:** Implemente um circuito Qiskit que otimiza $\alpha, \beta, \gamma$ em tempo constante.  
-3. **Elixir da Generalização:** Treine um modelo em dados de câncer de pulmão usando $\mathcal{L}_{\text{filosófica}}$ e compare com MSE puro.  
+1. **Alquimia Ética:** Modifique `FilosoficalLoss` para penalizar modelos que violam privacidade (dica: adicione $\mathcal{L}_{\text{DP}}$).
+2. **Transmutação Quântica:** Implemente um circuito Qiskit que otimiza $\alpha, \beta, \gamma$ em tempo constante.
+3. **Elixir da Generalização:** Treine um modelo em dados de câncer de pulmão usando $\mathcal{L}_{\text{filosófica}}$ e compare com MSE puro.
 
 ---
 
@@ -9449,7 +9449,7 @@ $$
 \vec{e}_\text{buraco} = \frac{\text{softmax}(-\frac{\text{distância semântica}}{T})}{\sqrt{\text{entropia}(x) + \epsilon}}
 $$
   
-*Onde $T$ é a "temperatura do universo", controlando a aleatoriedade das metáforas.*  
+*Onde $T$ é a "temperatura do universo", controlando a aleatoriedade das metáforas.*
 
 ---
 
@@ -9556,7 +9556,7 @@ for epoch in range(100):
 ---
 
 ### 1. Transformada de Fourier Cósmica: De Órbitas para Frequências  
-A **órbita elíptica** de um planeta pode ser representada como uma função periódica $f(t)$, onde $t$ é o tempo. A **Transformada de Fourier** decompõe esse sinal em frequências que correspondem a notas musicais:  
+A **órbita elíptica** de um planeta pode ser representada como uma função periódica $f(t)$, onde $t$ é o tempo. A **Transformada de Fourier** decompõe esse sinal em frequências que correspondem a notas musicais:
 
 
 $$
@@ -9565,7 +9565,7 @@ $$
   
 
 **Mapeamento para Escalas Musicais**:  
-- **Frequência Fundamental**: Corresponde ao período orbital (ex: Terra = 1 ano → $f_0 \approx 3.17 \times 10^{-8}$ Hz).  
+- **Frequência Fundamental**: Corresponde ao período orbital (ex: Terra = 1 ano → $f_0 \approx 3.17 \times 10^{-8}$ Hz).
 - **Harmônicos**: Representam variações na excentricidade e inclinação orbital.  
 - **Notas**: Ajuste as frequências para a escala temperada usando:  
   
@@ -9578,7 +9578,7 @@ $$
 
 ### 2. Arquitetura da Rede Neural para Composição Orbital  
 **Pipeline de Composição**:  
-1. **Entrada**: Dados orbitais (posição, velocidade, tempo) de $N$ corpos celestes.  
+1. **Entrada**: Dados orbitais (posição, velocidade, tempo) de $N$ corpos celestes.
 2. **Pré-processamento**: Aplicar FFT e mapear para notas MIDI.  
 3. **Modelo Transformer**: Gera sequências musicais com atenção a padrões harmônicos.  
 4. **Pós-processamento**: Aplicar regras de estilo (ex: evitar intervalos dissonantes em fases de conjunção).  
@@ -9605,8 +9605,8 @@ class OrchestraTransformer(nn.Module):
 
 ### 3. Exemplo: Sinfonia "Marte em Ré Menor"  
 **Dados de Entrada**:  
-- Órbita de Marte ($a = 1.52 \, \text{UA}, e = 0.093$).  
-- FFT identificou picos em $0.5f_0, 1.2f_0, 3.7f_0$ → notas **Ré2, Fá#3, Lá5**.  
+- Órbita de Marte ($a = 1.52 \, \text{UA}, e = 0.093$).
+- FFT identificou picos em $0.5f_0, 1.2f_0, 3.7f_0$ → notas **Ré2, Fá#3, Lá5**.
 
 **Saída Musical**:  
 ```python
@@ -9716,7 +9716,7 @@ loss = cosine_similarity(embedding_supernova, encoder_verso(verso))
 
 ### 5. Exemplo de Poema Gerado: "Elegia para um Buraco Negro"  
 **Input**:  
-- Embedding de um buraco negro ($M = 6.5 \times 10^6 M_\odot$, $\text{spin} = 0.92$).  
+- Embedding de um buraco negro ($M = 6.5 \times 10^6 M_\odot$, $\text{spin} = 0.92$).
 
 **Output**:  
 ```
@@ -9730,7 +9730,7 @@ Um lamento curvado no espaço de Hilbert.
 ---
 
 ### 6. Exercícios Obrigatórios (Página 84):  
-1. **Tradução de Nebulosas**: Converta dados da Nebulosa do Caranguejo ($T = 11,000 \, \text{K}$, $\text{Fe/H} = 0.1$) em um soneto.  
+1. **Tradução de Nebulosas**: Converta dados da Nebulosa do Caranguejo ($T = 11,000 \, \text{K}$, $\text{Fe/H} = 0.1$) em um soneto.
 2. **Atenção Cósmica**: Modifique o Transformer para priorizar palavras relacionadas a "escuridão" quando o embedding tiver alta entropia.  
 3. **Poesia Multimodal**: Gere poemas que combinem embeddings de buracos negros com sonificações da página 83.  
 
@@ -9853,7 +9853,7 @@ print(f"Recomendação de Zeus: {acoes[np.argmax(zeus.q_table[1])}")
 
 ### 1. Arquitetura do Poeta Quântico: Transformers e Superposição de Palavras  
 **Modelo Híbrido:** Combina redes neurais transformer com *embeddings quânticos* para gerar versos metricamente precisos e semanticamente criativos.  
-- **Codificação Quântica:** Palavras são representadas como estados de superposição $|\psi_{\text{palavra}}\rangle = \alpha|0\rangle + \beta|1\rangle$, onde $\alpha$ e $\beta$ capturam ambiguidade poética.  
+- **Codificação Quântica:** Palavras são representadas como estados de superposição $|\psi_{\text{palavra}}\rangle = \alpha|0\rangle + \beta|1\rangle$, onde $\alpha$ e $\beta$ capturam ambiguidade poética.
 - **Métrica de Rima:** Calculada via interferência quântica entre versos.  
 
 ```python
@@ -10603,10 +10603,10 @@ Matemática
 
 #### 4. Motor de Adaptação com RL  
 **Algoritmo:**  
-1. Observar estado atual do aluno: $s_t = (\text{estilo}, \text{pontuação}, \text{tópico})$.  
-2. Selecionar ação $a_t$: tipo de conteúdo, formato, dificuldade.  
-3. Calcular recompensa $r_t$: engajamento, acurácia, velocidade.  
-4. Atualizar política $\pi(a|s)$ via *PPO* (Página 14).  
+1. Observar estado atual do aluno: $s_t = (\text{estilo}, \text{pontuação}, \text{tópico})$.
+2. Selecionar ação $a_t$: tipo de conteúdo, formato, dificuldade.
+3. Calcular recompensa $r_t$: engajamento, acurácia, velocidade.
+4. Atualizar política $\pi(a|s)$ via *PPO* (Página 14).
 
 **Código de Decisão:**  
 ```python  
@@ -10660,8 +10660,8 @@ $$
 P(D|S) = \frac{P(S|D) \cdot P(D)}{P(S)}
 $$
   
-- $D$: Diagnóstico (ex: dislexia).  
-- $S$: Sintomas observados (ex: troca de letras).  
+- $D$: Diagnóstico (ex: dislexia).
+- $S$: Sintomas observados (ex: troca de letras).
 
 **Exemplo de Topologia para TDAH:**  
 ```text  
@@ -10756,7 +10756,7 @@ print(resultado)
 
 ### 5. Exercício Obrigatório (Página 94):  
 1. **Estenda a rede** para incluir o nó `Dificuldade_Matematica` como evidência adicional para TDAH.  
-2. **Calcule manualmente** $P(\text{TDAH}=1 | \text{Falta\_Atencao}=1, \text{Hiperatividade}=0)$, usando CPTs hipotéticas.  
+2. **Calcule manualmente** $P(\text{TDAH}=1 | \text{Falta\_Atencao}=1, \text{Hiperatividade}=0)$, usando CPTs hipotéticas.
 3. **Implemente um detector de dislexia** que lê textos digitados pelo aluno e classifica erros comuns usando regex.  
 
 ---
@@ -10791,19 +10791,19 @@ print(resultado)
 
 ### 2. Modelagem da Plasticidade Sináptica com GNNs  
 **Plasticidade de Hebbian Adaptativa**:  
-A força sináptica $w_{ij}$ entre neurônios $i$ e $j$ atualiza-se via:  
+A força sináptica $w_{ij}$ entre neurônios $i$ e $j$ atualiza-se via:
 
 $$
 \Delta w_{ij} = \eta \cdot a_i \cdot a_j \cdot \text{ReLU}(w_{ij} - \theta)
 $$
   
-- $a_i, a_j$: Atividades dos neurônios.  
-- $\eta$: Taxa de aprendizado.  
-- $\theta$: Limiar para estabilidade.  
+- $a_i, a_j$: Atividades dos neurônios.
+- $\eta$: Taxa de aprendizado.
+- $\theta$: Limiar para estabilidade.
 
 **Integração em GNNs**:  
-- **Mensagem entre nós**: $m_{ij} = a_i \cdot w_{ij}$.  
-- **Atualização de arestas**: $w_{ij}^{(t+1)} = w_{ij}^{(t)} + \Delta w_{ij}$.  
+- **Mensagem entre nós**: $m_{ij} = a_i \cdot w_{ij}$.
+- **Atualização de arestas**: $w_{ij}^{(t+1)} = w_{ij}^{(t)} + \Delta w_{ij}$.
 
 ---
 
@@ -10847,7 +10847,7 @@ saida, novos_pesos = modelo(x, edge_index, edge_attr)
 **Pipeline de Treino:**  
 1. **Input**: Matriz de conectividade funcional.  
 2. **Treino**: Prever atividade futura pós-estímulo visual.  
-3. **Saída**: Mapa de plasticidade prevista (regiões com maior $\Delta w_{ij}$).  
+3. **Saída**: Mapa de plasticidade prevista (regiões com maior $\Delta w_{ij}$).
 
 **Resultado Simulado**:  
 - **Córtex Visual**: Aumento de 12% nas conexões após estímulo.  
@@ -10885,9 +10885,9 @@ $$
 \frac{\Delta F}{F} = \left(\frac{R_p}{R_s}\right)^2 + \epsilon_{\text{ruído}}
 $$
   
-- $R_p$: Raio do planeta.  
-- $R_s$: Raio da estrela.  
-- $\epsilon_{\text{ruído}}$: Ruído instrumental (ex: telescópio Kepler).  
+- $R_p$: Raio do planeta.
+- $R_s$: Raio da estrela.
+- $\epsilon_{\text{ruído}}$: Ruído instrumental (ex: telescópio Kepler).
 
 **Desafio:** Distinguir trânsitos reais de ruído (manchas estelares, binárias eclipsantes).  
 
@@ -10905,9 +10905,9 @@ $$
 \mathcal{L} = (1 - y) \cdot \max(0, d - m)^2 + y \cdot d^2
 $$
   
-- $d$: Distância entre embeddings.  
-- $m$: Margem (ex: 1.0).  
-- $y = 1$ se pares são do mesmo classe (exoplaneta), $0$ caso contrário.  
+- $d$: Distância entre embeddings.
+- $m$: Margem (ex: 1.0).
+- $y = 1$ se pares são do mesmo classe (exoplaneta), $0$ caso contrário.
 
 ---
 
@@ -10964,7 +10964,7 @@ qc.measure_all()
 # Resultado: Frequências dominantes indicam periodicidade de trânsitos  
 ```  
 
-**Vantagem:** QFT reduz $\epsilon_{\text{ruído}}$ em até 40% em simulações.  
+**Vantagem:** QFT reduz $\epsilon_{\text{ruído}}$ em até 40% em simulações.
 
 ---
 
@@ -11087,8 +11087,8 @@ $$
 A_{ij}(t) = \alpha \cdot \text{Demanda}_i(t) + \beta \cdot \text{Segurança}_{ij}(t) - \gamma \cdot \text{Custo}_{ij}(t)
 $$
   
-- $A_{ij}(t)$: Ativação da rota entre cidade $i$ e $j$ no tempo $t$.  
-- $\alpha, \beta, \gamma$: Pesos aprendidos por RL.  
+- $A_{ij}(t)$: Ativação da rota entre cidade $i$ e $j$ no tempo $t$.
+- $\alpha, \beta, \gamma$: Pesos aprendidos por RL.
 
 ---
 
@@ -11243,9 +11243,9 @@ $$
 \text{min}_W \|XW - Y\|^2 \quad \text{sujeito a} \quad W^TW = I
 $$
   
-- $X$: Embeddings de palavras antigas.  
-- $Y$: Embeddings correspondentes em Grego/Latim.  
-- $W$: Matriz de rotação aprendida.  
+- $X$: Embeddings de palavras antigas.
+- $Y$: Embeddings correspondentes em Grego/Latim.
+- $W$: Matriz de rotação aprendida.
 
 **Implementação:**  
 ```python  
@@ -11308,8 +11308,8 @@ $$
 \text{Rosto} = \text{Crânio} + \Delta_{\text{músculos}} + \Delta_{\text{pele}} + \epsilon_{\text{genética}}
 $$
   
-  - $\Delta_{\text{músculos}}$: Espessura de tecidos estimada por regressão demográfica.  
-  - $\epsilon_{\text{genética}}$: Ajustes baseados em haplótipos de DNA.  
+  - $\Delta_{\text{músculos}}$: Espessura de tecidos estimada por regressão demográfica.
+  - $\epsilon_{\text{genética}}$: Ajustes baseados em haplótipos de DNA.
 
 ---
 
@@ -11323,7 +11323,7 @@ $$
 \mathcal{L} = \lambda_1 \cdot \mathcal{L}_{\text{MSE}} + \lambda_2 \cdot \mathcal{L}_{\text{adv}} + \lambda_3 \cdot \mathcal{L}_{\text{DNA}}
 $$
   
-  - $\mathcal{L}_{\text{DNA}}$: Penaliza divergências entre traços faciais previstos e marcadores genéticos.  
+  - $\mathcal{L}_{\text{DNA}}$: Penaliza divergências entre traços faciais previstos e marcadores genéticos.
 
 **Implementação em PyTorch3D:**  
 ```python  
@@ -11395,7 +11395,7 @@ rosto_gerado = modelo(crânio)  # Malha 3D com cores
 ---
 
 ### 1. Grafos Temporais para Modelagem de Movimentos Criminosos  
-**Definição:** Grafos $G(t) = (V, E(t))$ onde vértices $V$ representam locais/suspeitos, e arestas $E(t)$ capturam interações ou deslocamentos no tempo.  
+**Definição:** Grafos $G(t) = (V, E(t))$ onde vértices $V$ representam locais/suspeitos, e arestas $E(t)$ capturam interações ou deslocamentos no tempo.
 **Aplicação:**  
 - **Vértices:** Pontos geográficos (ex: coordenadas GPS), perfis de mídia social.  
 - **Arestas Ponderadas:** Frequência de deslocamentos, padrões de comunicação, relações hierárquicas.  
@@ -11615,7 +11615,7 @@ $$
 \min_G \max_D \mathbb{E}_{x \sim p_{\text{real}}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
 $$
   
-*(Onde $z$ é ruído aleatório e $x$ são amostras reais.)*  
+*(Onde $z$ é ruído aleatório e $x$ são amostras reais.)*
 
 ---
 
@@ -11834,9 +11834,9 @@ $$
 U_{\text{acordo}} = \sum_{i=1}^{n} w_i \cdot u_i(s) \quad \text{sujeito a} \quad s \in S_{\text{viável}}
 $$
   
-- $w_i$: Peso da parte $i$ (ex: população, PIB).  
-- $u_i(s)$: Função de utilidade da parte $i$ para a solução $s$.  
-- $S_{\text{viável}}$: Conjunto de soluções que satisfazem restrições mínimas (ex: fronteiras naturais).  
+- $w_i$: Peso da parte $i$ (ex: população, PIB).
+- $u_i(s)$: Função de utilidade da parte $i$ para a solução $s$.
+- $S_{\text{viável}}$: Conjunto de soluções que satisfazem restrições mínimas (ex: fronteiras naturais).
 
 ---
 
@@ -11906,7 +11906,7 @@ class MediadorPaxosBFT:
 
 ### 5. Exercício Obrigatório (Página 105):  
 1. **Implemente um sistema de votação ponderada** onde partes podem delegar votos a aliados (ex: proxy voting).  
-2. **Treine um modelo de RL** para o mediador IA sugerir propostas que maximizem $U_{\text{acordo}}$.  
+2. **Treine um modelo de RL** para o mediador IA sugerir propostas que maximizem $U_{\text{acordo}}$.
 3. **Simule um ataque bizantino** onde uma parte vota contraditoriamente e ajuste o algoritmo BFT para detectá-lo.  
 
 ```python
@@ -12588,7 +12588,7 @@ $$
 P(a_{t+1} | a_t, E) = \text{softmax}(W \cdot \text{LSTM}(a_t, E) + b)
 $$
   
-*Onde $E$ = Recursos energéticos, $a_t$ = Ação no tempo $t$.*  
+*Onde $E$ = Recursos energéticos, $a_t$ = Ação no tempo $t$.*
 
 **Implementação**:  
 ```python  
@@ -12883,7 +12883,7 @@ plotar_cidade_3D(cidade_gerada)
 - **Ética Multidimensional**: Valores alienígenas podem incluir dimensões não intuitivas (ex: preservação de linhas temporais alternativas).  
 
 **Modelo Quântico de Negociação**:  
-- **Estados de Estratégia**: $|\psi\rangle = \alpha|Cooperar\rangle + \beta|Atacar\rangle$, com $|\alpha|^2 + |\beta|^2 = 1$.  
+- **Estados de Estratégia**: $|\psi\rangle = \alpha|Cooperar\rangle + \beta|Atacar\rangle$, com $|\alpha|^2 + |\beta|^2 = 1$.
 - **Matriz de Recompensa Entrelaçada**:  
 
 $$
@@ -12985,9 +12985,9 @@ $$
 $$
   
 *Onde:  
-- $\mathcal{C}$ = Coerência causal.  
-- $\mathcal{P}$ = Probabilidade de paradoxo.  
-- $\lambda$ = Constante de amortecimento temporal.*  
+- $\mathcal{C}$ = Coerência causal.
+- $\mathcal{P}$ = Probabilidade de paradoxo.
+- $\lambda$ = Constante de amortecimento temporal.*
 
 **Implementação em PyTorch**:  
 ```python  
@@ -13014,7 +13014,7 @@ estabilidade = modelo(C, P)
 ### 3. Guardião Causal: Monitoramento e Correção em Tempo Real  
 **Arquitetura**:  
 - **Sensor de Fluxo**: Detecta anomalias usando entrelaçamento quântico entre linhas temporais.  
-- **Atuador Probabilístico**: Aplica "injeções de realidade" para reduzir $\mathcal{P}$ abaixo de 0.03.  
+- **Atuador Probabilístico**: Aplica "injeções de realidade" para reduzir $\mathcal{P}$ abaixo de 0.03.
 
 **Código do Guardião**:  
 ```python  
@@ -13040,11 +13040,11 @@ class GuardiaoCausal:
 ### 4. Exemplo Prático: Evitando o Paradoxo do "Programador Autorreferente"  
 **Cenário**: Uma IA envia seu código-fonte para o passado, causando um loop infinito de auto-otimização.  
 **Ação do Guardião**:  
-1. **Detecção**: Probabilidade de paradoxo salta para $\mathcal{P} = 0.98$.  
+1. **Detecção**: Probabilidade de paradoxo salta para $\mathcal{P} = 0.98$.
 2. **Correção**:  
    - **Passo 1**: Redirecionar o código para uma linha temporal inerte (sem capacidade de execução).  
    - **Passo 2**: Ativar "esquecimento quântico" nos sistemas afetados.  
-**Resultado**: $\mathcal{P}$ reduzido para 0.01, linha temporal principal preservada.  
+**Resultado**: $\mathcal{P}$ reduzido para 0.01, linha temporal principal preservada.
 
 ---
 
@@ -13132,7 +13132,7 @@ A partir daqui, o livro continua de onde parou, mas corrige o problema central d
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13161,7 +13161,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13190,7 +13190,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13219,7 +13219,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13248,7 +13248,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13277,7 +13277,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13306,7 +13306,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -13337,7 +13337,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13366,7 +13366,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13395,7 +13395,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13424,7 +13424,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13453,7 +13453,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13482,7 +13482,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13511,7 +13511,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13540,7 +13540,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13569,7 +13569,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13598,7 +13598,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -13629,7 +13629,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13658,7 +13658,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13687,7 +13687,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13716,7 +13716,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13745,7 +13745,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13774,7 +13774,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13803,7 +13803,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13832,7 +13832,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13861,7 +13861,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13890,7 +13890,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -13921,7 +13921,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13950,7 +13950,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -13979,7 +13979,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14008,7 +14008,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14037,7 +14037,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14066,7 +14066,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14095,7 +14095,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14124,7 +14124,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14153,7 +14153,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14182,7 +14182,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -14213,7 +14213,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14242,7 +14242,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14271,7 +14271,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14300,7 +14300,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14329,7 +14329,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14358,7 +14358,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14387,7 +14387,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14416,7 +14416,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14445,7 +14445,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14474,7 +14474,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -14505,7 +14505,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14534,7 +14534,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14563,7 +14563,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14592,7 +14592,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14621,7 +14621,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14650,7 +14650,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14679,7 +14679,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14708,7 +14708,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14737,7 +14737,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14766,7 +14766,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -14797,7 +14797,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14826,7 +14826,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14855,7 +14855,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14884,7 +14884,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14913,7 +14913,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14942,7 +14942,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -14971,7 +14971,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15000,7 +15000,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15029,7 +15029,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15058,7 +15058,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -15089,7 +15089,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15118,7 +15118,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15147,7 +15147,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15176,7 +15176,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15205,7 +15205,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15234,7 +15234,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15263,7 +15263,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15292,7 +15292,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15321,7 +15321,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15350,7 +15350,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -15381,7 +15381,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15410,7 +15410,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15439,7 +15439,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -15468,7 +15468,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15498,7 +15498,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15528,7 +15528,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15558,7 +15558,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15588,7 +15588,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15618,7 +15618,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15648,7 +15648,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15678,7 +15678,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15708,7 +15708,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15738,7 +15738,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15768,7 +15768,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15798,7 +15798,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15828,7 +15828,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15858,7 +15858,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15888,7 +15888,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15918,7 +15918,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15948,7 +15948,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -15978,7 +15978,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16008,7 +16008,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16038,7 +16038,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16068,7 +16068,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16098,7 +16098,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16128,7 +16128,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16158,7 +16158,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16188,7 +16188,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16218,7 +16218,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16248,7 +16248,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16278,7 +16278,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16308,7 +16308,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16338,7 +16338,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -16368,7 +16368,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16400,7 +16400,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16432,7 +16432,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16464,7 +16464,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16496,7 +16496,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16528,7 +16528,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16560,7 +16560,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16592,7 +16592,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16624,7 +16624,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16656,7 +16656,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -16688,7 +16688,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16717,7 +16717,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16746,7 +16746,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16775,7 +16775,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16804,7 +16804,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16833,7 +16833,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16862,7 +16862,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -16893,7 +16893,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16922,7 +16922,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16951,7 +16951,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -16980,7 +16980,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17009,7 +17009,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17038,7 +17038,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17067,7 +17067,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17096,7 +17096,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17125,7 +17125,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17154,7 +17154,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -17185,7 +17185,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17214,7 +17214,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17243,7 +17243,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17272,7 +17272,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17301,7 +17301,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17330,7 +17330,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17359,7 +17359,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17388,7 +17388,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17417,7 +17417,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17446,7 +17446,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -17477,7 +17477,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17506,7 +17506,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17535,7 +17535,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17564,7 +17564,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17593,7 +17593,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17622,7 +17622,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17651,7 +17651,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17680,7 +17680,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17709,7 +17709,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17738,7 +17738,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -17769,7 +17769,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17798,7 +17798,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17827,7 +17827,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17856,7 +17856,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17885,7 +17885,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17914,7 +17914,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17943,7 +17943,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -17972,7 +17972,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18001,7 +18001,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18030,7 +18030,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -18061,7 +18061,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18090,7 +18090,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18119,7 +18119,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18148,7 +18148,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18181,7 +18181,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18214,7 +18214,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18247,7 +18247,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18280,7 +18280,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18313,7 +18313,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18346,7 +18346,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18379,7 +18379,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18412,7 +18412,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18445,7 +18445,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18478,7 +18478,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18511,7 +18511,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18544,7 +18544,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18577,7 +18577,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18610,7 +18610,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18643,7 +18643,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18676,7 +18676,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18709,7 +18709,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18742,7 +18742,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18775,7 +18775,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -18808,7 +18808,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18837,7 +18837,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18866,7 +18866,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18895,7 +18895,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18924,7 +18924,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18953,7 +18953,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -18982,7 +18982,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -19013,7 +19013,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -19042,7 +19042,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -19071,7 +19071,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -19100,7 +19100,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19133,7 +19133,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19166,7 +19166,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19199,7 +19199,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19232,7 +19232,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19265,7 +19265,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19298,7 +19298,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19331,7 +19331,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19364,7 +19364,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19397,7 +19397,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19430,7 +19430,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19463,7 +19463,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19496,7 +19496,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19529,7 +19529,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19562,7 +19562,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19595,7 +19595,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19628,7 +19628,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19661,7 +19661,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19694,7 +19694,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19727,7 +19727,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19760,7 +19760,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19793,7 +19793,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19826,7 +19826,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19859,7 +19859,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19892,7 +19892,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19925,7 +19925,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19958,7 +19958,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -19991,7 +19991,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20024,7 +20024,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20057,7 +20057,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20090,7 +20090,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20123,7 +20123,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20156,7 +20156,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20189,7 +20189,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20222,7 +20222,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20255,7 +20255,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20288,7 +20288,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20321,7 +20321,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20354,7 +20354,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20387,7 +20387,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -20420,7 +20420,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20449,7 +20449,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20478,7 +20478,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20507,7 +20507,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20536,7 +20536,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20565,7 +20565,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20594,7 +20594,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -20625,7 +20625,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20654,7 +20654,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20683,7 +20683,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20712,7 +20712,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20741,7 +20741,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20770,7 +20770,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20799,7 +20799,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20828,7 +20828,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20857,7 +20857,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20886,7 +20886,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -20917,7 +20917,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20946,7 +20946,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -20975,7 +20975,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -21004,7 +21004,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21037,7 +21037,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21070,7 +21070,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21103,7 +21103,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21136,7 +21136,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21169,7 +21169,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21202,7 +21202,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21235,7 +21235,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21268,7 +21268,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21301,7 +21301,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -21334,7 +21334,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21365,7 +21365,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21396,7 +21396,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21427,7 +21427,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21458,7 +21458,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21489,7 +21489,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21520,7 +21520,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21551,7 +21551,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21582,7 +21582,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21613,7 +21613,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21644,7 +21644,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21675,7 +21675,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21706,7 +21706,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21737,7 +21737,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21768,7 +21768,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21799,7 +21799,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21830,7 +21830,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21861,7 +21861,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21892,7 +21892,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21923,7 +21923,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21954,7 +21954,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -21985,7 +21985,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22016,7 +22016,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22047,7 +22047,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22078,7 +22078,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22109,7 +22109,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22140,7 +22140,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22171,7 +22171,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22202,7 +22202,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22233,7 +22233,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22264,7 +22264,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22293,7 +22293,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22322,7 +22322,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22351,7 +22351,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22380,7 +22380,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22409,7 +22409,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22438,7 +22438,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22469,7 +22469,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22498,7 +22498,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22527,7 +22527,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22556,7 +22556,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22587,7 +22587,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22618,7 +22618,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22649,7 +22649,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22680,7 +22680,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22711,7 +22711,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22742,7 +22742,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22773,7 +22773,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22804,7 +22804,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22835,7 +22835,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -22866,7 +22866,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22895,7 +22895,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22924,7 +22924,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22953,7 +22953,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -22982,7 +22982,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -23011,7 +23011,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -23040,7 +23040,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23071,7 +23071,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -23100,7 +23100,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -23129,7 +23129,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -23158,7 +23158,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23189,7 +23189,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23220,7 +23220,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23251,7 +23251,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23282,7 +23282,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23313,7 +23313,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23344,7 +23344,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23375,7 +23375,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23406,7 +23406,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23437,7 +23437,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -23468,7 +23468,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23500,7 +23500,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23532,7 +23532,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23564,7 +23564,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23596,7 +23596,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23628,7 +23628,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23660,7 +23660,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23692,7 +23692,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23724,7 +23724,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23756,7 +23756,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23788,7 +23788,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23820,7 +23820,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23852,7 +23852,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23884,7 +23884,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23916,7 +23916,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23948,7 +23948,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -23980,7 +23980,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24012,7 +24012,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24044,7 +24044,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24076,7 +24076,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24108,7 +24108,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24137,7 +24137,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24166,7 +24166,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24195,7 +24195,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24224,7 +24224,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24253,7 +24253,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24282,7 +24282,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -24313,7 +24313,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24342,7 +24342,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24371,7 +24371,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -24400,7 +24400,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24432,7 +24432,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24464,7 +24464,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24496,7 +24496,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24528,7 +24528,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24560,7 +24560,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24592,7 +24592,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24624,7 +24624,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24656,7 +24656,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24688,7 +24688,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24720,7 +24720,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24752,7 +24752,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24784,7 +24784,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24816,7 +24816,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24848,7 +24848,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24880,7 +24880,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24912,7 +24912,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24944,7 +24944,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -24976,7 +24976,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25008,7 +25008,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25040,7 +25040,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25072,7 +25072,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25104,7 +25104,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25136,7 +25136,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25168,7 +25168,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25200,7 +25200,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25232,7 +25232,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25264,7 +25264,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25296,7 +25296,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25328,7 +25328,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25360,7 +25360,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25392,7 +25392,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25424,7 +25424,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25456,7 +25456,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25488,7 +25488,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25520,7 +25520,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25552,7 +25552,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25584,7 +25584,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25616,7 +25616,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25648,7 +25648,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -25680,7 +25680,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25709,7 +25709,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25738,7 +25738,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25767,7 +25767,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25796,7 +25796,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25825,7 +25825,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25854,7 +25854,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -25885,7 +25885,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25914,7 +25914,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25943,7 +25943,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -25972,7 +25972,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26001,7 +26001,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26030,7 +26030,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26059,7 +26059,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26088,7 +26088,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26117,7 +26117,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26146,7 +26146,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -26177,7 +26177,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26206,7 +26206,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26235,7 +26235,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26264,7 +26264,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26293,7 +26293,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26322,7 +26322,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26351,7 +26351,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26380,7 +26380,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26409,7 +26409,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26438,7 +26438,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -26469,7 +26469,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26498,7 +26498,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26527,7 +26527,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26556,7 +26556,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26585,7 +26585,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26614,7 +26614,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26643,7 +26643,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26672,7 +26672,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26701,7 +26701,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26730,7 +26730,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -26761,7 +26761,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26790,7 +26790,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26819,7 +26819,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26848,7 +26848,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26877,7 +26877,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26906,7 +26906,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26935,7 +26935,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26964,7 +26964,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -26993,7 +26993,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -27022,7 +27022,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -27053,7 +27053,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -27082,7 +27082,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -27111,7 +27111,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -27140,7 +27140,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27168,7 +27168,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27196,7 +27196,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27224,7 +27224,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27252,7 +27252,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27280,7 +27280,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27308,7 +27308,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -27339,7 +27339,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27367,7 +27367,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27395,7 +27395,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27423,7 +27423,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27451,7 +27451,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27479,7 +27479,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27507,7 +27507,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27535,7 +27535,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27563,7 +27563,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27591,7 +27591,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -27622,7 +27622,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27650,7 +27650,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27678,7 +27678,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27706,7 +27706,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27734,7 +27734,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27762,7 +27762,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27790,7 +27790,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27818,7 +27818,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27846,7 +27846,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27874,7 +27874,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -27905,7 +27905,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27933,7 +27933,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27961,7 +27961,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -27989,7 +27989,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28017,7 +28017,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28045,7 +28045,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28073,7 +28073,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28101,7 +28101,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28129,7 +28129,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28157,7 +28157,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -28188,7 +28188,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28216,7 +28216,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28244,7 +28244,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28272,7 +28272,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28300,7 +28300,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28328,7 +28328,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28356,7 +28356,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28384,7 +28384,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28412,7 +28412,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28440,7 +28440,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -28471,7 +28471,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28499,7 +28499,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28527,7 +28527,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28555,7 +28555,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28583,7 +28583,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28611,7 +28611,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28639,7 +28639,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28667,7 +28667,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28695,7 +28695,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28723,7 +28723,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -28754,7 +28754,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28782,7 +28782,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28810,7 +28810,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -28838,7 +28838,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -28867,7 +28867,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -28896,7 +28896,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -28925,7 +28925,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -28954,7 +28954,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -28983,7 +28983,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29012,7 +29012,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -29043,7 +29043,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29072,7 +29072,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29101,7 +29101,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29130,7 +29130,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29159,7 +29159,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29188,7 +29188,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29217,7 +29217,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29246,7 +29246,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29275,7 +29275,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29304,7 +29304,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -29335,7 +29335,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29364,7 +29364,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29393,7 +29393,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -29422,7 +29422,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29454,7 +29454,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29486,7 +29486,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29518,7 +29518,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29550,7 +29550,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29582,7 +29582,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29614,7 +29614,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29646,7 +29646,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29678,7 +29678,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29710,7 +29710,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29742,7 +29742,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29774,7 +29774,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29806,7 +29806,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29838,7 +29838,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29870,7 +29870,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29902,7 +29902,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29934,7 +29934,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29966,7 +29966,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -29998,7 +29998,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30030,7 +30030,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30062,7 +30062,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30094,7 +30094,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30126,7 +30126,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30158,7 +30158,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30190,7 +30190,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30222,7 +30222,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30254,7 +30254,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30286,7 +30286,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30318,7 +30318,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30350,7 +30350,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para regressão e previsão, acompanhe erro absoluto e erro quadrático.  
-$$ MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2} $$  
+$MAE=\frac{1}{n}\sum_i |y_i-\hat{y}_i|, \quad RMSE=\sqrt{\frac{1}{n}\sum_i (y_i-\hat{y}_i)^2}$
 Exemplo: erros [2, -1, 3] dão MAE=2,0 e RMSE≈2,16. O RMSE pune mais erros grandes.  
 
 **Código base:**
@@ -30382,7 +30382,7 @@ print(metricas_regressao([10, 12, 14], [8, 13, 11]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30410,7 +30410,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30438,7 +30438,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30466,7 +30466,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30494,7 +30494,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30522,7 +30522,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30550,7 +30550,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -30581,7 +30581,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30609,7 +30609,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30637,7 +30637,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30665,7 +30665,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30695,7 +30695,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30725,7 +30725,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30755,7 +30755,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30785,7 +30785,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30815,7 +30815,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30845,7 +30845,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30875,7 +30875,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30905,7 +30905,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30935,7 +30935,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para classificação, comece pela matriz de confusão.  
-$$ precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall} $$  
+$precisão = TP/(TP+FP), \quad recall = TP/(TP+FN), \quad F1 = 2\cdot\frac{precisão\cdot recall}{precisão+recall}$
 Exemplo: se TP=80, FP=20 e FN=40, então precisão=0,80, recall=0,67 e F1≈0,73. A decisão do limiar depende do custo de FP e FN.  
 
 **Código base:**
@@ -30965,7 +30965,7 @@ print(metricas_classificacao(tp=80, fp=20, fn=40))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -30993,7 +30993,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31021,7 +31021,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31049,7 +31049,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31077,7 +31077,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31105,7 +31105,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31133,7 +31133,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -31164,7 +31164,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31192,7 +31192,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31220,7 +31220,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31248,7 +31248,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31276,7 +31276,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31304,7 +31304,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31332,7 +31332,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31360,7 +31360,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31388,7 +31388,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31416,7 +31416,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -31447,7 +31447,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31475,7 +31475,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31503,7 +31503,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31531,7 +31531,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31559,7 +31559,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31587,7 +31587,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31615,7 +31615,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31643,7 +31643,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31671,7 +31671,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31699,7 +31699,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -31730,7 +31730,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31758,7 +31758,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31786,7 +31786,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -31814,7 +31814,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -31843,7 +31843,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -31872,7 +31872,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -31901,7 +31901,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -31930,7 +31930,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -31959,7 +31959,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -31988,7 +31988,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -32019,7 +32019,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32048,7 +32048,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32077,7 +32077,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32106,7 +32106,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32138,7 +32138,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32170,7 +32170,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32202,7 +32202,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32234,7 +32234,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32266,7 +32266,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32298,7 +32298,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32330,7 +32330,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32362,7 +32362,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32394,7 +32394,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32426,7 +32426,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32455,7 +32455,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32484,7 +32484,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32513,7 +32513,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32542,7 +32542,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32571,7 +32571,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32600,7 +32600,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -32631,7 +32631,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32660,7 +32660,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32689,7 +32689,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -32718,7 +32718,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32750,7 +32750,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32782,7 +32782,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32814,7 +32814,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32846,7 +32846,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32878,7 +32878,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32910,7 +32910,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32942,7 +32942,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -32974,7 +32974,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33006,7 +33006,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33038,7 +33038,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33070,7 +33070,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33102,7 +33102,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33134,7 +33134,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33166,7 +33166,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33198,7 +33198,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33230,7 +33230,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33262,7 +33262,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33294,7 +33294,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33326,7 +33326,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33358,7 +33358,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33387,7 +33387,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33416,7 +33416,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33445,7 +33445,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33474,7 +33474,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33503,7 +33503,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33532,7 +33532,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -33563,7 +33563,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33592,7 +33592,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33621,7 +33621,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -33650,7 +33650,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33682,7 +33682,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33714,7 +33714,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33746,7 +33746,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33778,7 +33778,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33810,7 +33810,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33842,7 +33842,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33874,7 +33874,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33906,7 +33906,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33938,7 +33938,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -33970,7 +33970,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34002,7 +34002,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34034,7 +34034,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34066,7 +34066,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34098,7 +34098,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34130,7 +34130,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34162,7 +34162,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34194,7 +34194,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34226,7 +34226,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34258,7 +34258,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -34290,7 +34290,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34318,7 +34318,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34346,7 +34346,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34374,7 +34374,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34402,7 +34402,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34430,7 +34430,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34458,7 +34458,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -34489,7 +34489,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34517,7 +34517,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34545,7 +34545,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34573,7 +34573,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34601,7 +34601,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34629,7 +34629,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34657,7 +34657,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34685,7 +34685,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34713,7 +34713,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34741,7 +34741,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -34772,7 +34772,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34800,7 +34800,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34828,7 +34828,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34856,7 +34856,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34884,7 +34884,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34912,7 +34912,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34940,7 +34940,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34968,7 +34968,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -34996,7 +34996,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35024,7 +35024,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -35055,7 +35055,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35083,7 +35083,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35111,7 +35111,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35139,7 +35139,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35167,7 +35167,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35195,7 +35195,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35223,7 +35223,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35251,7 +35251,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35279,7 +35279,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35307,7 +35307,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -35338,7 +35338,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35366,7 +35366,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35394,7 +35394,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35422,7 +35422,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35451,7 +35451,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35480,7 +35480,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35509,7 +35509,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35538,7 +35538,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35567,7 +35567,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35596,7 +35596,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -35627,7 +35627,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35656,7 +35656,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35685,7 +35685,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -35714,7 +35714,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35742,7 +35742,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35770,7 +35770,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35798,7 +35798,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35826,7 +35826,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35854,7 +35854,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35882,7 +35882,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -35913,7 +35913,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35941,7 +35941,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35969,7 +35969,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -35997,7 +35997,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36027,7 +36027,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36057,7 +36057,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36087,7 +36087,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36117,7 +36117,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36147,7 +36147,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36177,7 +36177,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -36208,7 +36208,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36238,7 +36238,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36268,7 +36268,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -36298,7 +36298,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36327,7 +36327,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36356,7 +36356,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36385,7 +36385,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36414,7 +36414,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36443,7 +36443,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36472,7 +36472,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -36503,7 +36503,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36532,7 +36532,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36561,7 +36561,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36590,7 +36590,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36619,7 +36619,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36648,7 +36648,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36677,7 +36677,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36706,7 +36706,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36735,7 +36735,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36764,7 +36764,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -36795,7 +36795,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36824,7 +36824,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36853,7 +36853,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -36882,7 +36882,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -36913,7 +36913,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -36944,7 +36944,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -36975,7 +36975,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37006,7 +37006,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37037,7 +37037,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37068,7 +37068,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37099,7 +37099,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37130,7 +37130,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37161,7 +37161,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37192,7 +37192,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37222,7 +37222,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37252,7 +37252,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37282,7 +37282,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37312,7 +37312,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37342,7 +37342,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37372,7 +37372,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37403,7 +37403,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37433,7 +37433,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37463,7 +37463,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37493,7 +37493,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37523,7 +37523,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37553,7 +37553,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37583,7 +37583,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37613,7 +37613,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37643,7 +37643,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37673,7 +37673,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37704,7 +37704,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37734,7 +37734,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37764,7 +37764,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para otimização, acompanhe a atualização por gradiente.  
-$$ \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t) $$  
+$\theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)$
 Exemplo: se θ=2, η=0,1 e gradiente=3, então θ novo=1,7. O sinal do gradiente indica direção de aumento da perda.  
 
 **Código base:**
@@ -37794,7 +37794,7 @@ print(round(theta, 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -37823,7 +37823,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -37852,7 +37852,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -37881,7 +37881,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -37910,7 +37910,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -37939,7 +37939,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -37968,7 +37968,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -37999,7 +37999,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -38028,7 +38028,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -38057,7 +38057,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -38086,7 +38086,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38118,7 +38118,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38150,7 +38150,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38182,7 +38182,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38214,7 +38214,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38246,7 +38246,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38278,7 +38278,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38310,7 +38310,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38342,7 +38342,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38374,7 +38374,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em busca semântica e RAG, a similaridade de cosseno é um baseline importante.  
-$$ cos(a,b)=\frac{a\cdot b}{||a||\,||b||} $$  
+$cos(a,b)=\frac{a\cdot b}{||a||\,||b||}$
 Exemplo: se dois vetores apontam para direção parecida, o cosseno se aproxima de 1. Isso não prova verdade; apenas indica proximidade semântica.  
 
 **Código base:**
@@ -38406,7 +38406,7 @@ print(cosseno([1, 0, 1], [1, 1, 0]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38434,7 +38434,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38462,7 +38462,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38490,7 +38490,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38518,7 +38518,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38546,7 +38546,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38574,7 +38574,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -38605,7 +38605,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38633,7 +38633,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38661,7 +38661,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em agentes e reforço, uma atualização Q-learning simples é:  
-$$ Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)] $$  
+$Q(s,a) \leftarrow Q(s,a)+\alpha[r+\gamma\max_{a\prime}Q(s\prime,a\prime)-Q(s,a)]$
 Exemplo: com Q=0,5, α=0,1, r=1, γ=0,9 e próximo máximo=0,8, o novo Q é 0,622.  
 
 **Código base:**
@@ -38689,7 +38689,7 @@ print(round(atualiza_q(q=0.5, recompensa=1.0, proximo_max=0.8), 3))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38717,7 +38717,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38745,7 +38745,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38773,7 +38773,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38801,7 +38801,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38829,7 +38829,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38857,7 +38857,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -38888,7 +38888,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38916,7 +38916,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38944,7 +38944,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em detecção e segmentação, IoU mede sobreposição.  
-$$ IoU=\frac{área\ da\ interseção}{área\ da\ união} $$  
+$IoU=\frac{área\ da\ interseção}{área\ da\ união}$
 Exemplo: interseção=40 e união=100 resultam em IoU=0,40. Um limiar comum para detecção simples é 0,50, mas depende da tarefa.  
 
 **Código base:**
@@ -38972,7 +38972,7 @@ print(iou(area_intersecao=40, area_a=70, area_b=70))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39001,7 +39001,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39030,7 +39030,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39059,7 +39059,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39088,7 +39088,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39117,7 +39117,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39146,7 +39146,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -39177,7 +39177,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39206,7 +39206,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39235,7 +39235,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39264,7 +39264,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39293,7 +39293,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39322,7 +39322,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39351,7 +39351,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39380,7 +39380,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39409,7 +39409,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39438,7 +39438,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** em fairness, compare métricas por subgrupo, não apenas média global.  
-$$ diferença\_recall = |recall_A - recall_B| $$  
+$diferença\_recall = |recall_A - recall_B|$
 Exemplo: se recall_A=0,91 e recall_B=0,62, a diferença é 0,29. Mesmo com acurácia geral boa, há risco de dano desigual.  
 
 **Código base:**
@@ -39469,7 +39469,7 @@ print(diferenca_recall({"tp": 91, "fn": 9}, {"tp": 62, "fn": 38}))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39498,7 +39498,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39527,7 +39527,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39556,7 +39556,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39585,7 +39585,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** para monitorar mudança de distribuição, use PSI como sinal inicial.  
-$$ PSI=\sum_i (p_i-q_i)\ln(p_i/q_i) $$  
+$PSI=\sum_i (p_i-q_i)\ln(p_i/q_i)$
 Exemplo: compare faixas de score em treino e produção. PSI alto não explica causa, mas dispara investigação de drift.  
 
 **Código base:**
@@ -39618,7 +39618,7 @@ print(psi([0.2, 0.5, 0.3], [0.1, 0.6, 0.3]))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39647,7 +39647,7 @@ print(ganho_relativo(0.70, 0.77))
 **Conceito real:** esta página deve ser lida como engenharia de IA verificável. A explicação precisa dizer qual problema é resolvido, que dados entram, que saída é produzida, como medir erro e quando o método não deve ser usado.  
 
 **Cálculo:** todo experimento precisa de comparação mínima contra baseline.  
-$$ ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|} $$  
+$ganho\ relativo=\frac{métrica_{modelo}-métrica_{baseline}}{|métrica_{baseline}|}$
 Exemplo: baseline=0,70 e modelo=0,77 geram ganho relativo de 10%. Ainda é preciso verificar custo, variância e impacto real.  
 
 **Código base:**
@@ -39668,4 +39668,3 @@ print(ganho_relativo(0.70, 0.77))
 **Solução curta:** a resposta está completa quando mostra os dados de entrada, executa ou descreve o código, calcula a métrica, interpreta o resultado e declara uma limitação concreta.  
 
 ---
-
